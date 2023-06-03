@@ -20,6 +20,10 @@ html {
   height: 100%;
 }
 
+main {
+  width: min(65ch, 100% - 4rem);
+  margin-inline: auto;
+}
 
 body {
   font-family: 'Work Sans', 'Inter', system-ui;
@@ -31,6 +35,7 @@ body {
   /*background-image: linear-gradient(to bottom, #c8edf0, #2c3a3b);*/
   background-color: var(--color5);
   color: var(--color2);
+
 }
 
 

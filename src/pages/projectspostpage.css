@@ -3,4 +3,18 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
+  flex-direction: column;
+  
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  padding: 10px 0px 10px 0px;;
+}
+
+.project-navigation a {
+  text-decoration: none; 
+  color: inherit;
 }
