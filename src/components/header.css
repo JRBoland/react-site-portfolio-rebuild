@@ -1,0 +1,23 @@
+#header{
+  border: 1px solid green;
+  height: 10vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-link {
+  text-decoration: none; 
+  color: inherit;
+  padding: 1em;
+  opacity: 0.8;
+}
+

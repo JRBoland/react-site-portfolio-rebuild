@@ -1,0 +1,6 @@
+.home-nav-button {
+  border: none;
+  background-color: transparent;
+  font-size: 3em;
+  color: var(--color1);
+}

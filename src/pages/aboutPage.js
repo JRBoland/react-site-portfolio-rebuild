@@ -1,7 +1,9 @@
+import './aboutpage.css'
+
 export  function About(props) {
   return (
-    <div>
-      About Page!
+    <div className="about">
+      <p>About Page!</p>
     </div>
   )
 }

@@ -1,6 +1,8 @@
+import './homepage.css'
+
 export  function Home(props) {
   return (
-    <div>
+    <div className="home">
       Home Page!
     </div>
   )

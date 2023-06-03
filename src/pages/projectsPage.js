@@ -1,6 +1,8 @@
+import './projectspage.css'
+
 export  function Projects(props) {
   return (
-    <div>
+    <div className="projects">
       Projects Page!
     </div>
   )
