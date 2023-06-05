@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 export  function Projects(props) {
 
   const projects = [
-    { id: 1, title: "Project 1" },
-    { id: 2, title: "Project 2" },
-    { id: 3, title: "Project 3" },
-    { id: 4, title: "Project 4" },
-    { id: 5, title: "Project 5" }
+    { id: 1, title: "Project 1", description: "Description of project 1 goes here" },
+    { id: 2, title: "Project 2", description: "Description of project 2 goes here"  },
+    { id: 3, title: "Project 3", description: "Description of project 3 goes here"  },
+    { id: 4, title: "Project 4", description: "Description of project 4 goes here"  },
+    { id: 5, title: "Project 5", description: "Description of project 5 goes here"  }
 ]
 
   return (
@@ -19,6 +19,10 @@ export  function Projects(props) {
         {projects.map((project) => (
           <li key={project.id}>
             <Link to={`/projects/${project.id}`}>{project.title}</Link>
+            <br />
+            <p>
+              {project.description}
+            </p>
           </li>
         ))}
       </ul>
