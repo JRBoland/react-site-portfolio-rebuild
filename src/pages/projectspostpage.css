@@ -18,3 +18,13 @@
   text-decoration: none; 
   color: inherit;
 }
+
+.blog-post-img-container {
+  border: 1px solid green;
+}
+
+.blog-post-img {
+  border: 1px solid orange;
+  width: 300px;
+  height: auto;
+}

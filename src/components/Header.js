@@ -1,13 +1,28 @@
 import { RedirectHomeButton } from "./RedirectHomeButton"
 import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import './header.css'
 
 export default function Header() {
 
   const location = useLocation()
   const currentPage = location.pathname.substring(1)
-
-  
+//
+//  const [show, setShow] = useState(true)
+//  const controlNavbar = () => {
+//    if (window.scrollY>100) {
+//      setShow(false)
+//    } else {
+//      setShow(true)
+//    }
+//  }
+//  
+//  useEffect(() => {
+//    window.addEventListener('scroll', controlNavbar)
+//    return () => {
+//      window.removeEventListener('scroll', controlNavbar)
+//    }
+//  }, [])
 
   return (
   <div>

@@ -1,5 +1,5 @@
 #header{
-  border: 1px solid green;
+
   background-color: var(---color5);
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  border: 1px solid pink;
+
   height: 10vh;
 
 }
@@ -18,13 +18,13 @@ nav {
 .navbar {
   display: flex;
   list-style-type: none;
-  border: 1px solid purple;
+
   height: 10vh;
   align-items: center;
 }
 
 .navbar-link {
-  border: 1px solid green;
+
   align-items: center;
   text-decoration: none; 
   color: inherit;
@@ -33,7 +33,7 @@ nav {
 }
 
 .homedirectory {
-  border: 1px solid orange;
+
   padding: 1em;
 }
 
