@@ -7,6 +7,8 @@ export default function Header() {
   const location = useLocation()
   const currentPage = location.pathname.substring(1)
 
+  
+
   return (
   <div>
       <header id="header">

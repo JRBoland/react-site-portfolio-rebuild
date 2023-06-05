@@ -1,6 +1,10 @@
 #header{
   border: 1px solid green;
-  
+  background-color: var(---color5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 nav {
@@ -8,6 +12,7 @@ nav {
   justify-content: space-between;
   border: 1px solid pink;
   height: 10vh;
+
 }
 
 .navbar {
