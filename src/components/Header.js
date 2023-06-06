@@ -1,14 +1,16 @@
 import { RedirectHomeButton } from "./RedirectHomeButton"
-import { Link, useLocation, Navigate } from 'react-router-dom'
-import React, { useEffect, useState, useContext } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon  } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 import { ThemeContext, themes } from '../ThemeContext'
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function Header() {
   const location = useLocation()
-  const currentPage = location.pathname.substring(1)
+  const currentPage = location.pathname.substring(1) || 'home'
 
   const [darkMode, setDarkMode] = React.useState(true)
   
@@ -36,7 +38,7 @@ export default function Header() {
       <nav className="navigation">
       <div className="homedirectory">
         <RedirectHomeButton />
-        <span className="where">{currentPage}</span>
+        <span className="where" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">{currentPage}</span>
       </div>
       
       <div className="navbar-container">
@@ -55,15 +57,16 @@ export default function Header() {
         
       </li>
       <li>
-        <Link to="about" className="navbar-link" >about</Link>
-      </li> | 
+        <Link to="/about" className="navbar-link" >about</Link>
+      </li>  
       <li>
-        <Link to="projects" className="navbar-link" >projects</Link>
-      </li> | 
+        <Link to="/projects" className="navbar-link" >projects</Link>
+      </li> 
       <li>
-        <Link to="contact" className="navbar-link" >contact</Link>
+        <Link to="/contact" className="navbar-link" >contact</Link>
       </li> 
       </ul>
+
       </div>
       </nav>
       </header>

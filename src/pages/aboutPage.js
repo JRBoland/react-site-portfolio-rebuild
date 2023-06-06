@@ -18,9 +18,8 @@ export  function About(props) {
     <div className="about">
       <main>
         <div className="about-split-view">
-
-        <div className="about-rhs">
-        <div data-aos="fade-ip" data-aos-easing="ease-in-out" className="section-div left">
+        <div className="about-lhs">
+        <div className="section-div left" data-aos="fade-up" data-aos-easing="ease-in-out">
           <h1 className="h2-fa-icon"><span>About</span> <FontAwesomeIcon icon={faAddressCard} /></h1>
           <br />
           <p>
@@ -45,7 +44,7 @@ export  function About(props) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p> 
         </div>
-        <div data-aos="fade-ip" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
+        <div data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
         <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faCode} /><span>Hands on experience with</span></h2>
         <div className="current-skills-div">
 
@@ -67,22 +66,26 @@ export  function About(props) {
             <li>C++</li>
           </ul>
         </div>
-        
         </div>
         </div>
-        </div>
-      <div className="about-lhs">
-      <Link to="jbIcon" className="download-link" target="_blank" download>
-        <div data-aos="fade-in" className="resume-photo-div">
-        <img src={jbImage} className="jbimage" alt="James Boland" />
+        <div className="filler">
+        <Link to="jbIcon" className="download-link" target="_blank" download>
         <div className="download">
         <FontAwesomeIcon icon={faFileArrowDown} />
         <span>
          <p>download my resume</p>
         </span>
         </div>
-        </div>
         </Link>
+        </div>
+        </div>
+      <div className="about-rhs">
+      
+        <div data-aos="fade-in" className="resume-photo-div">
+        <img src={jbImage} className="jbimage" alt="James Boland" />
+        
+        </div>
+       
       </div>
       </div>
       </main>

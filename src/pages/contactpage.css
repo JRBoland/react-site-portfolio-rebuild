@@ -5,10 +5,9 @@
   flex-direction: column;
   height: 80vh;
   width: min(100% - 4rem);
-
   margin-top: 10vh;
   color: var(--color1);
-  
+  z-index: 0;
 }
 
 .contact > h1 {

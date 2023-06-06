@@ -5,13 +5,14 @@
   align-items: center;
   height: 80svh;
   margin-top: 12dvh;
-  border: 1px solid pink;
   width: min(100% - 4rem);
   margin-inline: auto;
+  position: relative;
+  z-index: -1;
 }
-
 
 
 .welcome-div {
   width: fit-content;
+  
 }

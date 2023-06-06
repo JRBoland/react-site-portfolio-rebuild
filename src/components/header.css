@@ -6,18 +6,25 @@
   width: 100%;
 }
 
+
+
 nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  height: 10vh;
+  line-height: 4em;
+  height: 10dvh;
+
 }
 
 .navbar {
   display: flex;
   list-style-type: none;
+  flex-direction: column;
+  width: fit-content;
 
-  height: 10vh;
-  align-items: center;
+  align-items: flex-start;
+
 }
 
 .navbar {
@@ -27,9 +34,14 @@ nav {
 .dark-mode-toggle {
   width: 100%;
   display: flex;
-  
   align-items: center;
   justify-content: flex-start;
+}
+
+.navbar-container {
+ 
+  min-width: 10em;
+  width: fit-content;
 }
 
 .navbar-link {
@@ -38,6 +50,9 @@ nav {
   color: inherit;
   padding: 1em;
   opacity: 0.8;
+
+  z-index: 9999;
+  
 }
 
 .navbar li:hover {
@@ -56,14 +71,34 @@ nav {
 
 .dark-mode-toggle {
   font-size: 1.5em;
-  padding: 0 1em;
+  padding: 1em;
   color: var(--color1);
   transition: 0.2s ease;
+}
+
+.contact-info {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.5em;
+  width: fit-content;
+  height: 4em;
 }
 
 .dark-mode-toggle:hover {
   cursor: pointer;
   transform: translateY(-1px);
+}
+
+.where {
+  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 10s ease-in-out infinite alternate;
 }
 
 @keyframes textShine {
@@ -75,9 +110,35 @@ nav {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  #header{
+    background-color: var(---color5);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10dvh;
+  }
+  
+  .navbar {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+  }
+  
+
+
   .navbar  {
-    border: 1px solid green;
     padding: 0;
     margin: 0;
     display: flex;

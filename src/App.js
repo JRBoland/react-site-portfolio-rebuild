@@ -12,6 +12,7 @@ import { ProjectsPost } from './pages/projectsPostPage'
 import ThemeContextWrapper from './ThemeProvider';
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,7 +28,6 @@ function App() {
       <Footer />
       </ThemeContextWrapper>
     </BrowserRouter>
-  
   );
 }
 
