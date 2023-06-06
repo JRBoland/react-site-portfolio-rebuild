@@ -2,7 +2,9 @@ import './aboutpage.css'
 import React, { useEffect} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard, faUserGraduate, faCode, faArrowsToCircle, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 import jbImage from '../images/jbimage.jpg'
+import jbIcon from '../images/jbicon.jpg'
 import Aos from "aos"
 import "aos/dist/aos.css"
 
@@ -70,16 +72,17 @@ export  function About(props) {
         </div>
         </div>
       <div className="about-lhs">
-        <div className="resume-photo-div">
-        <img data-aos="fade-in"src={jbImage} className="jbimage" alt="James Boland" />
+      <Link to="jbIcon" className="download-link" target="_blank" download>
+        <div data-aos="fade-in" className="resume-photo-div">
+        <img src={jbImage} className="jbimage" alt="James Boland" />
         <div className="download">
         <FontAwesomeIcon icon={faFileArrowDown} />
         <span>
-         download my resume
+         <p>download my resume</p>
         </span>
         </div>
-        
         </div>
+        </Link>
       </div>
       </div>
       </main>

@@ -1,5 +1,4 @@
 #header{
-
   background-color: var(---color5);
   position: fixed;
   top: 0;
@@ -10,9 +9,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-
   height: 10vh;
-
 }
 
 .navbar {
@@ -23,8 +20,19 @@ nav {
   align-items: center;
 }
 
-.navbar-link {
+.navbar {
+  margin-left: 0;
+}
 
+.dark-mode-toggle {
+  width: 100%;
+  display: flex;
+  
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-link {
   align-items: center;
   text-decoration: none; 
   color: inherit;
@@ -32,8 +40,66 @@ nav {
   opacity: 0.8;
 }
 
-.homedirectory {
+.navbar li:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
 
+.navbar li:active {
+  transform: translateY(-2px);
+  transform: rotateY(0.05turn);
+}
+
+.homedirectory {
   padding: 1em;
 }
+
+.dark-mode-toggle {
+  font-size: 1.5em;
+  padding: 0 1em;
+  color: var(--color1);
+  transition: 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar  {
+    border: 1px solid green;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .navbar-link {
+    align-items: center;
+    text-decoration: none; 
+    color: inherit;
+    padding: 0.5em;    
+    opacity: 0.8;
+  }
+
+  .dark-mode-toggle {
+    font-size: 1.5em;
+    padding: 0.25em;
+    color: var(--color1);
+    transition: 0.2s ease;
+  }
+
+}
+
 

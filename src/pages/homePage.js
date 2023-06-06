@@ -1,17 +1,22 @@
 import './homepage.css'
+import React, { useState, useEffect } from "react"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 
 export  function Home(props) {
+  useEffect(() => {
+    Aos.init({duration: 2000})
+  }, [])
   return (
-    <div className="home">
-      <main>
-      <h1>Home</h1>
+    <div className="home" data-aos="fade-in" data-aos-easing="ease-in-out">
+      <main className="welcome-div">
+      <h1 data-aos="fade-in" data-aos-delay="300">Welcome.</h1>
+      <br />
+      <p data-aos="fade-in" data-aos-delay="1200">My name is James Boland</p>
+      <br />
+      <p data-aos="fade-in" data-aos-delay="2500"className="typing-text">I'm a web developer in training.</p>
       </main>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
     </div>
   )
 }

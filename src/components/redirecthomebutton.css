@@ -3,10 +3,58 @@
   background-color: transparent;
   font-size: 3em;
   color: var(--color1);
-
+  
   height: 8vh;
 }
 
-img {
+.home-nav {
+  transition: 0.1s ease;
+  
+}
+
+.home-nav > h2 {
   height: 1.5em;
+}
+
+.home-nav:hover {
+  cursor: pointer;
+  opacity: 1;
+  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 1s ease-in-out infinite alternate;
+  filter: drop-shadow(0px 0px 2px var(--color1));
+}
+
+.home-nav:active {
+  transform: translateY(-2px);
+  transform: rotateY(0.05turn);
+}
+
+.home-nav {
+  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 10s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-nav-button > h2 {
+    font-size: 1em;
+  }
 }

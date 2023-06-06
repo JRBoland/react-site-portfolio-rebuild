@@ -1,12 +1,18 @@
 import { RedirectHomeButton } from "./RedirectHomeButton"
-import { useLocation } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import { Link, useLocation, Navigate } from 'react-router-dom'
+import React, { useEffect, useState, useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSun, faMoon  } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
+import { ThemeContext, themes } from '../ThemeContext'
 
 export default function Header() {
-
   const location = useLocation()
   const currentPage = location.pathname.substring(1)
+
+  const [darkMode, setDarkMode] = React.useState(true)
+  
+
 //
 //  const [show, setShow] = useState(true)
 //  const controlNavbar = () => {
@@ -15,7 +21,7 @@ export default function Header() {
 //    } else {
 //      setShow(true)
 //    }
-//  }
+//  } 
 //  
 //  useEffect(() => {
 //    window.addEventListener('scroll', controlNavbar)
@@ -32,15 +38,35 @@ export default function Header() {
         <RedirectHomeButton />
         <span className="where">{currentPage}</span>
       </div>
+      
       <div className="navbar-container">
       <ul className="navbar">
-        <li><a className="navbar-link" href="/about">about</a></li> | 
-        <li><a className="navbar-link" href="/projects">projects</a></li> | 
-        <li><a className="navbar-link" href="/contact">contact</a></li> 
+      <li>
+        <ThemeContext.Consumer>
+        {({ changeTheme }) => (
+          <span className="dark-mode-toggle" onClick={() => {
+            setDarkMode(!darkMode);
+            changeTheme(darkMode ? themes.light : themes.dark)
+          }}>
+          <FontAwesomeIcon icon={darkMode ? faSun : faMoon } />
+        </span>
+        )}
+        </ThemeContext.Consumer>
+        
+      </li>
+      <li>
+        <Link to="about" className="navbar-link" >about</Link>
+      </li> | 
+      <li>
+        <Link to="projects" className="navbar-link" >projects</Link>
+      </li> | 
+      <li>
+        <Link to="contact" className="navbar-link" >contact</Link>
+      </li> 
       </ul>
       </div>
       </nav>
-  </header>
+      </header>
   </div>
   )
 }

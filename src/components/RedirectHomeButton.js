@@ -1,22 +1,17 @@
-import React, { useState } from "react"
-import { Navigate } from "react-router-dom"
-import './redirecthomebutton.css'
-import jbIcon from '../images/jbicon.jpg'
+import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+import './redirecthomebutton.css';
 
 export function RedirectHomeButton() {
-  const [shouldRedirect, setShouldRedirect] = useState(false);
-
   const changeRedirectStatus = () => {
-    setShouldRedirect(true);
-  };
+    window.location.href = "/";
+  }
 
   return (
     <div>
-      
-      <button className="home-nav-button">
-      <img src={jbIcon} onClick={changeRedirectStatus}/>
+      <button className="home-nav-button" onClick={changeRedirectStatus}>
+        <h2 className="home-nav">./JB</h2>
       </button>
-      {shouldRedirect && <Navigate to="/" />}
     </div>
   );
 }
