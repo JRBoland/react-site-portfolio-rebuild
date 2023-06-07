@@ -58,9 +58,6 @@ export  function ProjectsPost(props) {
   ]
 
   const { id } = useParams() // Retrieve the project ID from the URL parameter
-
-  const [title, setTitle] = useState('')
-  const [contents, setContents] = useState('')
   
   useEffect(() => {
     window.scrollTo(0, 0);
