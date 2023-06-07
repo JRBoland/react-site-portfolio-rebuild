@@ -19,7 +19,8 @@ export  function About(props) {
         <div className="about-split-view">
         <div className="about-lhs">
         <div className="section-div left" data-aos="fade-up" data-aos-easing="ease-in-out">
-          <h1 className="h2-fa-icon"><span>About</span> <FontAwesomeIcon icon={faAddressCard} /></h1>
+          <h1 className="h2-fa-icon">
+            <span>About</span> <FontAwesomeIcon icon={faAddressCard} /></h1>
           <br />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

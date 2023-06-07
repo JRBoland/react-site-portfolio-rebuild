@@ -1,14 +1,25 @@
 import './projectspage.css'
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import blogImage1 from '../images/blog-image-1.jpg'
 import blogImage2 from '../images/blog-image-2.jpg'
 import blogImage3 from '../images/blog-image-3.jpg'
 import blogImage4 from '../images/blog-image-4.jpg'
 import blogImage5 from '../images/blog-image-5.jpg'
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDiagramProject } from '@fortawesome/free-solid-svg-icons'
+
+
 
 export  function Projects(props) {
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  useEffect(() => {
+    Aos.init({duration: 1000})
+  }, [])
   const projects = [
     { id: 1, 
       title: "Terminal Application", 
@@ -55,8 +66,8 @@ export  function Projects(props) {
   return (
     <div className="projects">
       <main>
-      <div className="projects-split-view">
-      <h1>Projects</h1>
+      <div className="projects-split-view" data-aos="fade-in" data-aos-easing="ease-in-out">
+      <h1 className="h2-fa-icon"><span>Projects</span> <FontAwesomeIcon icon={faDiagramProject} className="h2-fa-icon-dec"/></h1>
       <p>
         A collection of projects Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
       <div className="projects-list">
@@ -65,13 +76,13 @@ export  function Projects(props) {
       
       <ul>
         {projects.map((project) => (
-          <li key={project.id} className="projects-map">
-            <Link to={`/projects/${project.id}`} style={{ textDecoration: 'none' }} className="projects-link"
+          <li key={project.id} className="projects-map" data-aos="fade-in" data-aos-easing="ease-in-out">
+            <Link to={`/projects/${project.id}`} style={{ textDecoration: 'none', pointerEvents: 'auto', zIndex: '555' }} className="projects-link"
             >  
-            <h2>{project.title}</h2>
+            <h2>{project.title} </h2>
             <img src={project.image} className="projects-img" alt={`${project.name}`}/>
             </Link>
-            <br />
+        
             <p className="projects-description">
               {project.date}
               <br/>

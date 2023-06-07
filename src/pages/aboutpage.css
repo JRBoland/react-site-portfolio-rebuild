@@ -6,7 +6,7 @@
   height: 80svh;
   margin-top: 0;
   color: var(--color1);
-  z-index: -1;
+  z-index: 0;
 }
 
 h2, h1, h3 {
@@ -15,12 +15,13 @@ h2, h1, h3 {
 
 
 .h2-fa-icon {
-  color: var(--color2)
+  color: var(--color2);
 }
 
 .h2-fa-icon span {
   color: var(--color1);
 }
+
 .about-split-view {
   display: flex;
   flex-direction: row;
