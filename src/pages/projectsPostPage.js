@@ -1,5 +1,5 @@
 import './projectspostpage.css'
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { useParams, Link } from 'react-router-dom'
 import blogImage1 from '../images/blog-image-1.jpg'
 import blogImage2 from '../images/blog-image-2.jpg'
