@@ -55,10 +55,14 @@ body {
   color: var(--color2);
   /*background: linear-gradient(-45deg, var(--color5), var(--color4));
   animation: gradient 15s ease-in-out infinite;*/
-
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
 
 img, svg {
@@ -73,3 +77,4 @@ img, svg {
   --color2: #4D6B8C;
   --color1: #272727;
 }
+
