@@ -43,9 +43,13 @@
   
 }
 
+.project-navigation-links p {
+  color: var(--color2);
+  opacity: 0.8;
+}
+
 .project-navigation a {
   text-decoration: none; 
-  color: var(--color2);
   
 }
 
@@ -54,13 +58,13 @@
 }
 
 .project-navigation-links p:hover {
-  opacity: 0.7;
   transform: translateY(-1px);
+  opacity: 1;
 }
 
 .project-navigation-links p:active {
   transform: translateY(-2px);
-  font-style: italic;
+  transform: rotateY(0.02turn);
 }
 
 
