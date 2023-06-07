@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
   <div>
-      <header id="header">
+      <header className="header">
       <nav className="navigation">
       <div className="homedirectory">
         <RedirectHomeButton />

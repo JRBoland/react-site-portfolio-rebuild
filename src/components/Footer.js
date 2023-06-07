@@ -12,10 +12,8 @@ export default function Footer() {
     <FontAwesomeIcon icon={faGithub} />
     </div>
     <div class="links">
-      <div class="social-media">
       
        <span className="copyright">&copy; James Boland 2022. All rights reserved.</span>
-      </div>  
       
     </div>
 </footer>

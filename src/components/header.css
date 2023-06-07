@@ -1,4 +1,4 @@
-#header{
+.header{
   background-color: var(---color5);
   position: fixed;
   top: 0;
@@ -13,8 +13,8 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   line-height: 4em;
-  height: 10dvh;
-
+  height: 1dvh;
+  
 }
 
 .navbar {
@@ -24,7 +24,7 @@ nav {
   width: fit-content;
 
   align-items: flex-start;
-
+  
 }
 
 .navbar {
@@ -36,6 +36,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  
 }
 
 .navbar-container {
@@ -50,7 +51,6 @@ nav {
   color: inherit;
   padding: 1em;
   opacity: 0.8;
-
   z-index: 9999;
   
 }
@@ -67,6 +67,7 @@ nav {
 
 .homedirectory {
   padding: 1em;
+  width: fit-content;
 }
 
 .dark-mode-toggle {

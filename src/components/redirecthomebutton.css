@@ -19,7 +19,7 @@
 .home-nav:hover {
   cursor: pointer;
   opacity: 1;
-  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  background: linear-gradient(315deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,7 +34,7 @@
 }
 
 .home-nav {
-  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  background: linear-gradient(135deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

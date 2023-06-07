@@ -69,17 +69,20 @@ export  function About(props) {
         </div>
         </div>
         <div className="filler">
-        <Link to="jbIcon" className="download-link" target="_blank" download>
-        <div className="download">
-        <FontAwesomeIcon icon={faFileArrowDown} />
-        <span>
-         <p>download my resume</p>
-        </span>
+         
+            <div className="download">
+              <FontAwesomeIcon icon={faFileArrowDown} />
+              <span>
+              <Link to="jbIcon"  target="_blank" download className="download-link-link">
+              <p className="download-link">download my resume</p>
+              </Link>
+              </span>
+            </div>
+          
         </div>
-        </Link>
         </div>
-        </div>
-      <div className="about-rhs">
+        
+        <div className="about-rhs">
       
         <div data-aos="fade-in" className="resume-photo-div">
         <img src={jbImage} className="jbimage" alt="James Boland" />
