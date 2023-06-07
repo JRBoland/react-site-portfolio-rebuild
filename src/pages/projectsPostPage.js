@@ -69,24 +69,34 @@ export  function ProjectsPost(props) {
   return (
     <div className="projects-post">
       <main>
+      <div className="projects-post-container">
       <h1>{project.title}</h1>
-      <p>{project.date}</p>
+      
       <div className="blog-post-img-container">
         <img className="blog-post-img" src={project.image} alt={`${project.name}`}/>
+        
         <div className="project-navigation">
-          {previousProjectIndex !== null && (
-           <Link to={`/projects/${projects[previousProjectIndex].id}`}>
-            <p>Previous Project</p>
-            </Link>
-         )}
+        
          {nextProjectIndex !== null && (
-           <Link to={`/projects/${projects[nextProjectIndex].id}`}>
+           <Link to={`/projects/${projects[nextProjectIndex].id}`} className="project-navigation-links">
               <p>Next Project</p>
            </Link>
           )}
+          {previousProjectIndex !== null && (
+           <Link to={`/projects/${projects[previousProjectIndex].id}`} className="project-navigation-links">
+            <p>Previous Project</p>
+            </Link>
+         )}
+         <Link to="/projects" className="project-navigation-links">
+          <p>Back to Projects</p>
+          </Link>
+
         </div>
       </div>
+      <p>{project.date}</p>
+      <br/>
       <p>{project.contents}</p>
+      </div>
       </main>
     </div>
   )

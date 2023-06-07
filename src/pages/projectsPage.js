@@ -59,7 +59,7 @@ export  function Projects(props) {
       <h1>Projects</h1>
       <p>
         A collection of projects Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
-      <div className="projects-lhs">
+      <div className="projects-list">
       
       <div className="projects-section-div">
       

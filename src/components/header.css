@@ -1,11 +1,10 @@
 .header{
   background: linear-gradient(to bottom, var(--color5), 60%, transparent);
-  height: 10dvh;
+  height: 12dvh;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 0;
   pointer-events: none;
 }
 
@@ -20,14 +19,13 @@ nav {
   
 }
 
+
 .navbar {
   display: flex;
   list-style-type: none;
   flex-direction: column;
   width: fit-content;
-
   align-items: flex-start;
-  
 }
 
 .navbar {
@@ -43,7 +41,6 @@ nav {
 }
 
 .navbar-container {
- 
   min-width: 10em;
   width: fit-content;
 }
@@ -121,12 +118,13 @@ nav {
     z-index: 0;
   }
 
-
+  .homedirectory  {
+    line-height: 1em;
+  }
 
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 10dvh;
   }
   
