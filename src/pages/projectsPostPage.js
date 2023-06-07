@@ -72,7 +72,7 @@ export  function ProjectsPost(props) {
       <h1>{project.title}</h1>
       <p>{project.date}</p>
       <div className="blog-post-img-container">
-        <img className="blog-post-img" src={project.image} />
+        <img className="blog-post-img" src={project.image} alt={`${project.name}`}/>
         <div className="project-navigation">
           {previousProjectIndex !== null && (
            <Link to={`/projects/${projects[previousProjectIndex].id}`}>

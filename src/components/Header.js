@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon  } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 import { ThemeContext, themes } from '../ThemeContext'
+// eslint-disable-next-line 
 import Aos from "aos"
 import "aos/dist/aos.css"
 

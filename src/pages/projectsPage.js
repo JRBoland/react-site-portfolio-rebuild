@@ -51,11 +51,6 @@ export  function Projects(props) {
       contents: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
 ]
-  const [hoveredImage, setHoveredImage] = React.useState(null);
-
-  const handleLinkHover = (image) => {
-    setHoveredImage(image);
-  }
 
   return (
     <div className="projects">
@@ -74,7 +69,7 @@ export  function Projects(props) {
             <Link to={`/projects/${project.id}`} style={{ textDecoration: 'none' }} className="projects-link"
             >  
             <h2>{project.title}</h2>
-            <img src={project.image} className="projects-img"/>
+            <img src={project.image} className="projects-img" alt={`${project.name}`}/>
             </Link>
             <br />
             <p className="projects-description">
