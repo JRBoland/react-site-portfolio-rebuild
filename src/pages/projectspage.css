@@ -6,7 +6,6 @@
   height: 80svh;
   margin-top: 0;
   color: var(--color1);
-  z-index: -1;
 }
 
 .projects-map {
@@ -24,7 +23,6 @@
 .projects-link > h2 {
   text-decoration: none;
   color: var(--color1);
-  z-index: 9997;
   margin-left: 0.25em;
 }
 

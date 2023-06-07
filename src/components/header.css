@@ -1,9 +1,12 @@
 .header{
-  background-color: var(---color5);
+  background: linear-gradient(to bottom, var(--color5), 60%, transparent);
+  height: 10dvh;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 
@@ -36,7 +39,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+  pointer-events: auto;
 }
 
 .navbar-container {
@@ -51,7 +54,7 @@ nav {
   color: inherit;
   padding: 1em;
   opacity: 0.8;
-  z-index: 9999;
+  pointer-events: auto;
   
 }
 
@@ -68,6 +71,7 @@ nav {
 .homedirectory {
   padding: 1em;
   width: fit-content;
+  pointer-events: auto;
 }
 
 .dark-mode-toggle {
@@ -112,12 +116,9 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-  #header{
-    background-color: var(---color5);
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .header {
+    height: 25dvh;
+    z-index: 0;
   }
 
 
