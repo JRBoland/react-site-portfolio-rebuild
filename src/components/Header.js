@@ -1,6 +1,6 @@
 import { RedirectHomeButton } from "./RedirectHomeButton"
 import { Link, useLocation } from 'react-router-dom'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon  } from '@fortawesome/free-solid-svg-icons'
 import './header.css'

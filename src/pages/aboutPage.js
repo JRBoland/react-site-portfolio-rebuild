@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard, faUserGraduate, faCode, faArrowsToCircle, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom"
 import jbImage from '../images/jbimage.jpg'
-import jbIcon from '../images/jbicon.jpg'
 import Aos from "aos"
 import "aos/dist/aos.css"
 
