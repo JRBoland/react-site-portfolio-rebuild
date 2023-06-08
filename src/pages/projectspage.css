@@ -21,11 +21,8 @@
   
 }
 
-.projects-link {
 
-}
-
-.projects-link > img:hover, h2:hover {
+.projects-link > img:hover, .projects-link > h2:hover {
   opacity: 0.7;
 }
 
@@ -48,7 +45,7 @@
 }
 
 .projects-img {
-  border-radius: 4px;
+  border-radius: 8px;
   max-width: 360px;
   height: auto;
   margin: 2em 0em;
@@ -98,7 +95,6 @@
 }
 
 .projects-img {
-  border-radius: 4px;
   max-width: 100%;
   height: auto;
   margin: 2em 0em;

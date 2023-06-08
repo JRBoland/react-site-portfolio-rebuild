@@ -8,8 +8,12 @@ export default function Footer() {
   <div>
   <footer className="footer">
     <div class="contact-info">
-    <FontAwesomeIcon icon={faLinkedin} />
+    <a href="https://www.linkedin.com/in/james-boland-4079a717a/">
+      <FontAwesomeIcon icon={faLinkedin} />
+    </a>
+    <a href="https://github.com/JRBoland">
     <FontAwesomeIcon icon={faGithub} />
+    </a>
     </div>
     <div class="links">
       

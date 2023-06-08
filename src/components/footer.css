@@ -6,7 +6,7 @@
   height: 1em;
   display: flex;
   align-items: flex-end;
-  z-index: -1;
+  z-index: 1;
 
 }
 
@@ -30,6 +30,23 @@
 
 }
 
+
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
+  
+  
+}
+
+.contact-info a:hover {
+  opacity: 0.7;
+  transform: translateY(1px);
+}
+
+.contact-info a:active {
+  transform: translateY(-0px);
+}
 
 
 @media only screen and (max-width: 768px) {

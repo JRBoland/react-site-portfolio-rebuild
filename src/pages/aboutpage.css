@@ -195,6 +195,8 @@ h2, h1, h3 {
   .jbimage {
     max-height: 75dvh;
     width: auto;
+    justify-content: center;
+    margin-left: 0;
   }
 
   .filler {
@@ -231,6 +233,8 @@ h2, h1, h3 {
     position: relative;
     width: 100%;
     transform: translateX(0);
+    justify-content: center;
+    margin-top: 1em;
   }
 
   .about-lhs {
@@ -239,11 +243,7 @@ h2, h1, h3 {
     transform: translateX(0)
    }
 
-  .jbimage {
-  width: 100%;
   
-    
-  }
   .resume-photo-div {
   margin-bottom: 12vh;
   }
