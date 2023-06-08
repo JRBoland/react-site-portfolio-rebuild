@@ -14,9 +14,9 @@
   --color4: #A1A6B4;
   --color3: #94C5CC;
   --color2: #b4d2e7;
-  --color1: #f8f8f8; 
+  --color1: #fffefc; 
   --main-font: 'Archivo Black', sans-serif;
-  --secondary-font: 'Archivo', sans-serif;
+  --secondary-font: 'Work Sans', sans-serif;
 }
 
 
@@ -71,10 +71,10 @@ img, svg {
 }
 
 .white-content {
-  --color5: #ffffff;
-  --color4: #6E7481;
-  --color3: #5B868B;
-  --color2: #4D6B8C;
+  --color5: #fffefc;
+  --color4: #b4d2e7;
+  --color3: #94C5CC;
+  --color2: #94C5CC;
   --color1: #272727;
 }
 

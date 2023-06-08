@@ -48,9 +48,9 @@ nav {
 .navbar-link {
   align-items: center;
   text-decoration: none; 
-  color: inherit;
+  color: var(--color1);
   padding: 1em;
-  opacity: 0.8;
+  opacity: 0.9;
   pointer-events: auto;
   
 }
