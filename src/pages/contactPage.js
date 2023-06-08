@@ -31,11 +31,11 @@ export  function Contact(props) {
         </Mailto>     
         </li>        
         <li> 
-          <a href="https://www.linkedin.com/in/james-boland-4079a717a/">
+          <a href="https://www.linkedin.com/in/james-boland-4079a717a/" target="_blank" rel="noreferrer">
           <span><FontAwesomeIcon icon={faLinkedin} /></span> connect on linkedin</a>
         </li>
         <li> 
-          <a href="https://github.com/JRBoland">
+          <a href="https://github.com/JRBoland" target="_blank" rel="noreferrer">
           <span><FontAwesomeIcon icon={faGithub} /></span> check out my github</a>
         </li>
       </ul>

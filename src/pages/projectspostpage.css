@@ -48,9 +48,8 @@
   opacity: 0.8;
 }
 
-.project-navigation a {
+.project-navigation-links {
   text-decoration: none; 
-  
 }
 
 .blog-post-img-container {
@@ -79,5 +78,7 @@
 @media only screen and (max-width: 768px) {
   .projects-post {
     text-align: center;
+    width: 100%;
+    margin: 0;
   }
 }

@@ -8,10 +8,10 @@ export default function Footer() {
   <div>
   <footer className="footer">
     <div class="contact-info">
-    <a href="https://www.linkedin.com/in/james-boland-4079a717a/">
+    <a href="https://www.linkedin.com/in/james-boland-4079a717a/" target="_blank" rel="noreferrer">
       <FontAwesomeIcon icon={faLinkedin} />
     </a>
-    <a href="https://github.com/JRBoland">
+    <a href="https://github.com/JRBoland" target="_blank" rel="noreferrer">
     <FontAwesomeIcon icon={faGithub} />
     </a>
     </div>

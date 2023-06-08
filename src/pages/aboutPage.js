@@ -23,25 +23,60 @@ export  function About(props) {
             <span>About</span> <FontAwesomeIcon icon={faAddressCard} /></h1>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            THIS IS ALL DRAFT
+            <br/>
+            <br/>
+          Hi I'm James, 
+          <br/>
+          <br/>
+          An aspiring developer currently studying a a Diploma of IT with Coder Academy.
+          <br/>
+          <br/>
+          I've been studying web development since August 2022, where I first started self-teaching using various online resources -thank you theodinproject-. I enrolled for Coder Academy's October intake and have been studying their standard Full Stack Web Development course since, due to finish in August this year.
+          <br/>
+          <br/>
+          I've fallen in love with development ya di ya da.
+          I've previously been involved in music production and worked for the government dealing with tax and superannuation. I am looking to switch careers and join the ever-growing world of tech.
+          <br/>
+          <br/>
+          I'm a keen problem solver with an eye for detail & I'm eager to play a part in bringing ideas to life. I am available to work and am looking for opportunities that will help me grow and kick start my career in this chosen field.
+        
+          
+          
+          <br/>
+          <br/>
+          
           </p>
           </div>
           <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
             <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faUserGraduate} /><span>Education</span></h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          I graduated from the University of Wollongong with a double degree in a Bachelor of Economics & Finance (Economics major) and a Bachelor of Arts (Sociology major).
+          <br/>
+          <br/>
+          I'm currently enrolled in a Full Stack Web Development Bootcamp with Coder Academy, finishing August 2023.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div left">
           <h2 className="h2-fa-icon"><span>Approach</span> <FontAwesomeIcon icon={faArrowsToCircle} /></h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          I'm a fast, eager learner with a curious mind.
+          <br/>
+          <br/>
+          Coming from a background of dealing with audio and music production, I found some similarities in my approach to working with code.
+          I'm interested in coding because it allows some creative freedom in approaching a solution. It's creative problem solving, executed by logic. I love to build things, and to be able to make an impact in the process.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
         <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faCode} /><span>Skills</span></h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          My skills are expanding as I build more projects. 
+          <br/>
+          <br/>
+          I believe that my strength is in building the front end of applications, however I'm always curious about understanding about whats going on behind the scenes in the back end. 
+          <br/>
+          <br/>
+          I'm currently learning React and I'm keen to get more experience with Tailwind CSS and Bootstrap.
         </p> 
         </div>
         <div data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
