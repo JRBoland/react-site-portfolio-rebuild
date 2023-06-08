@@ -42,7 +42,6 @@
 @media only screen and (max-width: 768px) {
   .home {
     text-align: center;
-    border: 1px solid red;
   }
 
   .welcome-div {
