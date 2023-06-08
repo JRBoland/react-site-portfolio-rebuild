@@ -15,7 +15,7 @@ export  function Home(props) {
       <br />
       <p className="welcome-text" data-aos="fade-in" data-aos-delay="1200">My name is <span className="welcome-text">James Boland</span></p>
       <br />
-      <p className="welcome-text" data-aos="fade-in" data-aos-delay="2500">I'm a Junior Developer studying at Coder Academy.</p>
+      <p className="welcome-text" data-aos="fade-in" data-aos-delay="2500">I'm a Junior Developer studying at <a href="https://coderacademy.edu.au/">Coder Academy.</a></p>
       </main>
     </div>
   )

@@ -8,16 +8,25 @@
   width: min(100% - 4rem);
   margin-inline: auto;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   
 
 }
 
+.welcome-div a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
+}
+
+.welcome-div a:hover {
+  opacity: 0.7
+}
 
 .welcome-div {
   width: fit-content;
-  
+  color: var(--color2);
 }
 
 .welcome-div span {
@@ -26,7 +35,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 500% auto;
-  animation: textShine 10s ease-in-out infinite alternate;
+  animation: textShine 4s ease-in-out infinite alternate;
 }
 
 .welcome-div h1 {
