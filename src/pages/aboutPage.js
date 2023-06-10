@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard, faUserGraduate, faCode, faArrowsToCircle, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom"
 import jbImage from '../images/jbimage.jpg'
+import jbResume from "../images/jamesboland-resume.pdf"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
@@ -108,7 +109,7 @@ export  function About(props) {
             <div className="download">
               <FontAwesomeIcon icon={faFileArrowDown} />
               <span>
-              <Link to="jbIcon"  target="_blank" download className="download-link-link">
+              <Link to={jbResume}  target="_blank" download className="download-link-link">
               <p className="download-link">download my resume</p>
               </Link>
               </span>
