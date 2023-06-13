@@ -26,7 +26,7 @@ export  function Contact(props) {
       <ul class="contact-list" data-aos="fade-in"
     data-aos-anchor-placement="center-bottom" >     
         <li className="mail-me"> 
-        <Mailto  email="james.boland94@hotmail.com" subject="Hey!" body="Let's grab a coffee!">   
+        <Mailto  email="jamesbolanddev@gmail.com" subject="Hey!" body="Let's grab a coffee!">   
           <span><FontAwesomeIcon icon={faEnvelope} /></span> send me an email
         </Mailto>     
         </li>        

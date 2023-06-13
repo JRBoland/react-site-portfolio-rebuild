@@ -173,7 +173,7 @@ h2, h1, h3 {
   
  }
  .section-div.right {
-  text-align: center;
+  text-align: left;
 }
 
 .section-div.left h2 > span {
@@ -181,7 +181,7 @@ h2, h1, h3 {
 }
 
 .section-div.left {
-  text-align: center;
+  text-align: left;
 }
 
 .section-div.right h2 > span {
@@ -189,7 +189,7 @@ h2, h1, h3 {
 }
 
 .about {
-  text-align: center;
+  text-align: left;
     width: 100%;
     margin: 0;
     padding: 1em;
