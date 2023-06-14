@@ -33,7 +33,7 @@ export  function ProjectsPost(props) {
       date: "April 2022",
       image: `${blogImage2}`,
       description: "First website built from following the odin project",
-      contents: "The very first site I built and deployed when self-teaching with theodinproject.com. A simple receipes site with Homer having a little boogie. Try seeing where the link to my other work takes you.",
+      contents: "The very first site I built and deployed when self-teaching with theodinproject.com. A simple recipes site with Homer having a little boogie. Try seeing where the link to my other work takes you.",
       link: "https://github.com/JRBoland/odin-recipes",
       live: "https://jrboland.github.io/odin-recipes/"
     },
@@ -131,7 +131,6 @@ export  function ProjectsPost(props) {
           {project.live && (
             <a href={project.live} target="_blank" rel="noopener noreferrer" className="download-link-link"><FontAwesomeIcon icon={faLaptopCode} /> Live</a>
           )}
-          
           </p>
           <br/>
           <hr/>

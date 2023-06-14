@@ -17,7 +17,6 @@
   padding: 20px;
   padding-bottom: 20dvh;
   line-height: 2.5em;
-  
 }
 
 .date {
@@ -55,6 +54,7 @@
 .project-navigation-links.right {
   text-align: left;
 }
+
 
 .project-navigation-links p {
   color: var(--color2);
