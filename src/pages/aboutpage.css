@@ -110,6 +110,11 @@ h2, h1, h3 {
 
 .download-link-link {
   text-decoration: none;
+  color: var(--color2);
+}
+
+.download-link-link:hover {
+  opacity: 0.8
 }
 
 

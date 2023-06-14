@@ -1,7 +1,7 @@
 import './aboutpage.css'
 import React, { useEffect} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard, faUserGraduate, faCode, faArrowsToCircle, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faAddressCard, faUserGraduate, faCode, faArrowsToCircle, faFileArrowDown, faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom"
 import jbImage from '../images/jbimage.jpg'
 import jbResume from "../images/jamesboland-resume.pdf"
@@ -22,66 +22,78 @@ export  function About(props) {
         <div className="section-div left" data-aos="fade-up" data-aos-easing="ease-in-out">
           <h1 className="h2-fa-icon">
             <span>About</span> <FontAwesomeIcon icon={faAddressCard} /></h1>
-          <br />
           <p>
-            THIS IS ALL DRAFT
-            <br/>
-            <br/>
-          Hi I'm James, 
+          Hi I'm James Boland. 
           <br/>
           <br/>
-          An aspiring developer currently studying a a Diploma of IT with Coder Academy.
+          I enjoy making things.
           <br/>
           <br/>
-          I've been studying web development since August 2022, where I first started self-teaching using various online resources -thank you theodinproject-. I enrolled for Coder Academy's October intake and have been studying their standard Full Stack Web Development course since, due to finish in August this year.
+          I'm an aspiring developer currently studying a a Diploma of IT with Coder Academy and
+          I've been studying web development since August 2022, where I started self-teaching using various online resources <em>(thank you theodinproject)</em>. 
           <br/>
           <br/>
-          I've fallen in love with development ya di ya da.
-          I've previously been involved in music production and worked for the government dealing with tax and superannuation. I am looking to switch careers and join the ever-growing world of tech.
+          I immediately took to the development process of planning and building something from nothing, and soon found myself enrolling for Coder Academy's October intake of their Full Stack Web Development course. I've been studying with them since October 2022 and am due to finish in August this year (2023). 
           <br/>
           <br/>
-          I'm a keen problem solver with an eye for detail & I'm eager to play a part in bringing ideas to life. I am available to work and am looking for opportunities that will help me grow and kick start my career in this chosen field.
-        
-          
-          
+          <em>A little bit on how I got here:</em> 
           <br/>
           <br/>
-          
+          In 2018, after graduating from University, I went overseas for 5 months, travelling solo and pursuing new and challenging experiences (such as a road trip through the North East corner of the US and working on boats in Croatia!). I'd recognised that what I had studied in University (B Econ & Finance/B Arts Sociology) didn't align with my interests and create opportunities for a career I could see myself loving.
+          <br/>
+          <br/>
+          I spent some time working in hospitality and for the Australian Government while also exploring different interests with an open mind, mainly related to music and audio production. 
+          <br/>
+          <br/>
+          I made some projects and released some music (you can check me out on Spotify under 'bondla') and towards the end of 2021, I started my own small business "Podcusts", delivering custom podcast audio intros and outros, tailored to the clients specifications. It was in developing this small side business (which is still running, though infrequent) that I stumbled across web development. I found I was really drawn to the whole "creating a website" part of starting a business, using site builders like Webflow (which didn't work, too advanced for me back then) and Wix (which did work! phew).  
+          <br/>
+          <br/>
+          I'd fallen in love with coding
+          <br/>
+          <br/>
+          - and now I'm here, keen to start a new career in tech.
           </p>
           </div>
           <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
-            <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faUserGraduate} /><span>Education</span></h2>
+            <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faUserGraduate} /> <span>Education</span></h2>
           <p>
           I graduated from the University of Wollongong with a double degree in a Bachelor of Economics & Finance (Economics major) and a Bachelor of Arts (Sociology major).
           <br/>
           <br/>
-          I'm currently enrolled in a Full Stack Web Development Bootcamp with Coder Academy, finishing August 2023.
+          I'm currently enrolled in a Full Stack Web Development Bootcamp with Coder Academy, which includes a Diploma of Information Technology, finishing August 2023.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div left">
           <h2 className="h2-fa-icon"><span>Approach</span> <FontAwesomeIcon icon={faArrowsToCircle} /></h2>
           <p>
-          I'm a fast, eager learner with a curious mind.
+          I'm a fast, eager learner with a curious mind and an eye for detail.
           <br/>
           <br/>
-          Coming from a background of dealing with audio and music production, I found some similarities in my approach to working with code.
-          I'm interested in coding because it allows some creative freedom in approaching a solution. It's creative problem solving, executed by logic. I love to build things, and to be able to make an impact in the process.
+          Coming from a background of dealing with audio and music production, I've found that my true passion lies in creating something starting from it's seed - an idea.
+          <br/>
+          <br/>
+          I am available to work and am looking for opportunities that will help me grow and kick start my career in this  field.
+          <br/>
+          <br/>
+          I'm ready to play a part in bringing ideas to life.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
-        <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faCode} /><span>Skills</span></h2>
+        <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faCode} /> <span>Skills</span></h2>
         <p>
-          My skills are expanding as I build more projects. 
+          My skills are expanding as I build more projects. For an up to date list, check out my <Link to={jbResume}  target="_blank" download className="download-link-link">
+              resume
+              </Link>.
           <br/>
           <br/>
-          I believe that my strength is in building the front end of applications, however I'm always curious about understanding about whats going on behind the scenes in the back end. 
+          I have experience in the full-stack of web development, with a leaning towards the front end of applications. That being said, I'm always curious about understanding about whats going on behind the scenes in the back end and am eager to expand my skills with consideration of the full-stack. 
           <br/>
           <br/>
-          I'm currently learning React and I'm keen to get more experience with Tailwind CSS and Bootstrap.
+          I'm currently learning the MERN stack (MongoDB, Express.js, React, Node.js)
         </p> 
         </div>
         <div data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="100" className="section-div right">
-        <h2 className="h2-fa-icon"><FontAwesomeIcon icon={faCode} /><span>Hands on experience with</span></h2>
+        <h2 className="h2-fa-icon"><span>Hands on experience with</span> <FontAwesomeIcon icon={faTerminal} /></h2>
         <div className="current-skills-div">
 
         <div className="learnt">
