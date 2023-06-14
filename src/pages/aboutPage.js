@@ -88,18 +88,23 @@ export  function About(props) {
           <ul>
             <li>Python</li>
             <li>JavaScript</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
+            <li>MongoDB</li>
+            <li>Express.js</li>
             <li>React</li>
+            <li>Node.js</li>
             <li>Flask</li>
-            <li>Express</li>
           </ul>
         </div>
 
         <div className="learning">
           <ul>
-            <li>Express</li>
-            <li>C++</li>
+            <li>PostgreSQL</li>
+            <li>Git</li>
+            <li>Postman</li>
+            <li>Insomnia</li>
+            <li>Figma</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
           </ul>
         </div>
         </div>
