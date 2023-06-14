@@ -27,7 +27,7 @@ export  function Projects(props) {
       //post-image: ,
       date: "November 2020",
       image: `${blogImage6}`,
-      description: "What I got up to before being in dev",
+      description: "What I got up to before being in web development",
       contents: "I had a couple projects, travelled and worked on boats in croatia, worked on music stuff, attempted to make a small business which is still ongoing, but infrequent (creating podcast intros) scored a short film for a london film school which was presented to film festivals. I funded this whilst working for the government dealing with tax and superannation. You can catch me on spotify @ bondla",
       link: ""
     },
@@ -36,7 +36,7 @@ export  function Projects(props) {
       //post-image: ,
       date: "April 2022",
       image: `${blogImage2}`,
-      description: "First website built from following the odin project",
+      description: "First website built from following The Odin Project",
       contents: "The very first site I built and deployed when self-teaching with theodinproject.com. A simple receipes site with Homer having a little boogie. Try seeing where the link to my other work takes you.",
       link: "https://jrboland.github.io/odin-recipes/"
     },
@@ -45,7 +45,7 @@ export  function Projects(props) {
       //post-image: ,
       date: "November 2022",
       image: `${blogImage5}`,
-      description: "An old portfolio site done as one of the first assignments at Coder Academy.",
+      description: "An old portfolio site done as one of the first assignments at Coder Academy",
       contents: "My second built and deployed website was a portfolio site, made for the second assignment with Coder Academy. A good introduction to site building and styling, and using Github. Static website built using HTML and CSS.  This current site is built using React, you can view its Github repo here: __.",
       link: "https://github.com/JRBoland/JamesBoland_T1A2"
     },
@@ -54,7 +54,7 @@ export  function Projects(props) {
       //post-image: ,
       date: "December 2023",
       image: `${blogImage3}`,
-      description: "Terminal CRUD application made with python",
+      description: "Terminal CRUD application made with Python",
       contents: "Intro to programming assignment, hard to come up with idea, landed on dog shelter feeding helper - idea is that you can add and remove dogs to a shelter 'inventory' mark which ones have been fed for the day and also monitor and edit their dietary needs. CRUD functionality within python, could do with a lot of refactoring as first project and code is messy.",
       link: "https://github.com/JRBoland/T1A3-Terminal-Application"
     },
@@ -63,7 +63,7 @@ export  function Projects(props) {
       //post-image: ,
       date: "February 2023",
       image: `${blogImage4}`,
-      description: "Drone logs API built with flask, python",
+      description: "Drone logs API built with Flask, Python",
       contents: "Coder Academy assignment, built an API. Experience with flask framework, database relationship models, get requests, using insomnia and postman",
       link: "https://github.com/JRBoland/JamesBoland_T2A2"
     },
@@ -85,7 +85,6 @@ export  function Projects(props) {
       <h1 className="h2-fa-icon"><span>Projects</span> <FontAwesomeIcon icon={faDiagramProject} className="h2-fa-icon-dec"/></h1>
       <p>
         These are some projects I've worked on during my short journey into web development.
-        **ALL PROJECT CONTENTS AND DESCRIPTIONS ARE CURRENTLY DRAFTS**
       </p>  
       <div className="projects-list">
       
