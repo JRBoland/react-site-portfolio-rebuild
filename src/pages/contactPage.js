@@ -31,7 +31,7 @@ export  function Contact(props) {
         </Mailto>     
         </li>        
         <li> 
-          <a href="https://www.linkedin.com/in/james-boland-4079a717a/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/jamesrboland/" target="_blank" rel="noreferrer">
           <span><FontAwesomeIcon icon={faLinkedin} /></span> connect on linkedin</a>
         </li>
         <li> 
