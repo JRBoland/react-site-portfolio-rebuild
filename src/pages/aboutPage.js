@@ -29,7 +29,7 @@ export  function About(props) {
           I enjoy making things.
           <br/>
           <br/>
-          I'm an aspiring developer currently studying a a Diploma of IT with Coder Academy and
+          I'm an aspiring developer currently studying a Diploma of IT with Coder Academy and
           I've been studying web development since August 2022, where I started self-teaching using various online resources <em>(thank you theodinproject)</em>. 
           <br/>
           <br/>
@@ -45,7 +45,7 @@ export  function About(props) {
           I spent some time working in hospitality and for the Australian Government while also exploring different interests with an open mind, mainly related to music and audio production. 
           <br/>
           <br/>
-          I made some projects and released some music (you can check me out on Spotify under 'bondla') and towards the end of 2021, I started my own small business "Podcusts", delivering custom podcast audio intros and outros, tailored to the clients specifications. It was in developing this small side business (which is still running, though infrequent) that I stumbled across web development. I found I was really drawn to the whole "creating a website" part of starting a business, using site builders like Webflow (which didn't work, too advanced for me back then) and Wix (which did work! phew).  
+          I made some projects and released some music (you can check me out on Spotify as <a href="https://open.spotify.com/artist/5kYuYclOITzjaaYLAT42gK" className="download-link-link">'bondla'</a>) and towards the end of 2021, I started my own small business "Podcusts", delivering custom podcast audio intros and outros, tailored to the clients specifications. It was in developing this small side business (which is still running, though infrequent) that I stumbled across web development. I found I was really drawn to the whole "creating a website" part of starting a business, using site builders like Webflow (which didn't work) and <a href="https://podcusts.wixsite.com/website-2/" className="download-link-link">Wix</a> (which did work! phew).  
           <br/>
           <br/>
           I'd fallen in love with coding
