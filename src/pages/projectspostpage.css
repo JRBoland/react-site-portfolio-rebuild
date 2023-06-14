@@ -40,7 +40,20 @@
 .project-navigation-links {
   padding: 1em 0;
   pointer-events: auto;
-  
+}
+
+.project-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-navigation-links.left {
+  text-align: right;
+}
+
+.project-navigation-links.right {
+  text-align: left;
 }
 
 .project-navigation-links p {
