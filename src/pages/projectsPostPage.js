@@ -74,7 +74,7 @@ export  function ProjectsPost(props) {
       image: `${blogImage1}`,
       description: "Basic weather clock app built with a team during an in-term Coder Academy Hackathon",
       contents: "Learned git collaboration, further experience with react concepts, further use of HTML, CSS and responsive layout. Built the responsive frontend and created search bar functionality to capture an input to be retrieved from OpenWeather API. View the presentation in the repository for a further breakdown of the build process.",
-      link: "https://github.com/JRBoland/JamesBoland_T2A2",
+      link: "https://github.com/stuWolf/Hackathon_22_05_23",
       live: "https://gpweatherclock.netlify.app/"
     },
   ]
