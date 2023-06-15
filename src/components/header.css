@@ -158,6 +158,71 @@ nav {
     padding: 0.25em;
     color: var(--color1);
     transition: 0.2s ease;
+    padding-top: 2em;
+    justify-content: center;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: 2em;
+    margin-right: 2em;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color1);
+    transition: transform 0.3s ease;
+  }
+
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(180deg) translate(2px, 7px);
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    opacity: 1;
+    transform: rotate(90deg) translateY(-16px);
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(-145deg) translate(2px, 4px);
+  }
+
+  .mobile-menu {
+    background-color: var(--color5);
+    padding: 1em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 22dvh;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+  }
+  
+
+  .mobile-navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-navbar li {
+    margin-bottom: 1em;
+  }
+
+  .mobile-navbar-link {
+    text-decoration: none;
+    color: var(--color1);
   }
 
 }
