@@ -50,6 +50,8 @@
   max-width: 360px;
   height: auto;
   margin: 2em 0em;
+  border: 1px solid var(--color3);
+  padding: 4px;
 }
 
 .projects-split-view > h1 {
@@ -99,6 +101,7 @@
   max-width: 100%;
   height: auto;
   margin: 2em 0em;
+
 }
 
 
