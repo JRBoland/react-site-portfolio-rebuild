@@ -183,19 +183,51 @@ nav {
     transition: transform 0.3s ease;
   }
 
+  .burger-menu span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  .burger-menu span:nth-child(2) {
+    top: 18px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  .burger-menu span:nth-child(3) {
+    top: 36px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
   .burger-menu.active span:nth-child(1) {
-    transform: rotate(180deg) translate(2px, 7px);
-    opacity: 0.8;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
   }
 
   .burger-menu.active span:nth-child(2) {
-    opacity: 0.8;
-    transform: rotate(90deg) translateY(-16px);
+    width: 0%;
+    opacity: 0;
   }
 
   .burger-menu.active span:nth-child(3) {
-    opacity: 0.8;
-    transform: rotate(-145deg) translate(2px, 4px);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
   }
 
   .mobile-menu {
