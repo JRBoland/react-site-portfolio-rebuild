@@ -185,14 +185,16 @@ nav {
 
   .burger-menu.active span:nth-child(1) {
     transform: rotate(180deg) translate(2px, 7px);
+    opacity: 0.8;
   }
 
   .burger-menu.active span:nth-child(2) {
-    opacity: 1;
+    opacity: 0.8;
     transform: rotate(90deg) translateY(-16px);
   }
 
   .burger-menu.active span:nth-child(3) {
+    opacity: 0.8;
     transform: rotate(-145deg) translate(2px, 4px);
   }
 
