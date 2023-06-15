@@ -39,18 +39,19 @@
   flex-direction: column;
   justify-content: center;
  
-
 }
 
 .contact-list > li {
   display: flex;
   line-height: 4em;
+
 }
 
 .contact-list a {
   text-decoration: none;
   color: inherit;
-  
+  display: flex;
+  align-items: center;
 }
 
 .contact-list a:hover {

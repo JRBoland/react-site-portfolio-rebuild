@@ -29,6 +29,7 @@
 
 h2, h1, h3 {
   font-family: var(--main-font), Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: .0125em;
 }
 
 html {

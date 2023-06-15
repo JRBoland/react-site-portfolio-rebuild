@@ -85,6 +85,9 @@ export  function Projects(props) {
       <h1 className="h2-fa-icon"><span>Projects</span> <FontAwesomeIcon icon={faDiagramProject} className="h2-fa-icon-dec"/></h1>
       <p>
         These are some projects I've worked on during my short journey into web development.
+        <br/>
+        <br/>
+        Click on the posts title or image to dig in a little deeper.
       </p>  
       <div className="projects-list">
       

@@ -125,11 +125,11 @@ export  function ProjectsPost(props) {
           <br/>
           <br/>
           {project.link && (
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="download-link-link"><FontAwesomeIcon icon={faGitAlt} /> Repository</a>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="download-link-link"><FontAwesomeIcon icon={faGitAlt} /> Source Code</a>
           )}
           <br/>
           {project.live && (
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="download-link-link"><FontAwesomeIcon icon={faLaptopCode} /> Live</a>
+            <a href={project.live} target="_blank" rel="noopener noreferrer" className="download-link-link"><FontAwesomeIcon icon={faLaptopCode} /> Live Version</a>
           )}
           </p>
           <br/>
