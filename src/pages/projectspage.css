@@ -22,8 +22,20 @@
 }
 
 
+.projects-link > img {
+  transition: transform 200ms, opacity 500ms; /* Adds transition to both transform and opacity */
+}
+
 .projects-link > img:hover, .projects-link h2:hover {
   opacity: 0.7;
+}
+
+.projects-link h2:hover {
+  transform: translateY(-1px)
+}
+
+.projects-link > img:hover {
+  transform: scale(1.01);
 }
 
 .projects-link > h2 {

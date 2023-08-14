@@ -12,7 +12,7 @@ export  function Home(props) {
   return (
     <div className="home" data-aos="fade-in" data-aos-easing="ease-in-out">
       <main className="welcome-div">
-      <h1 className="welcome-text" data-aos="fade-in" data-aos-delay="300">Hello.</h1>
+      <h1 className="welcome-text" data-aos="fade-in" data-aos-delay="300">Hi.</h1>
       <br />
       <p className="welcome-text" data-aos="fade-in" data-aos-delay="1200">
         My name is 
@@ -22,7 +22,7 @@ export  function Home(props) {
       </p>
       <br />
       <p className="welcome-text" data-aos="fade-in" data-aos-delay="2500">
-          I'm a Junior Developer studying at  
+          I'm a Junior Developer and recent graduate of 
           <a className="coder-link" href="https://coderacademy.edu.au/"> Coder Academy.
           </a>
       </p>

@@ -16,6 +16,7 @@ export default function Header() {
   const [darkMode, setDarkMode] = React.useState(true)
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false)
+  const [fadeIn, setFadeIn] = useState(false);
   
   useEffect(() => {
     const handleResize = () => {
@@ -33,6 +34,14 @@ export default function Header() {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   }
+
+  useEffect(() => {
+    // Reset the fade-in animation when user revisits the home page
+    if (location.pathname === "/") {
+        setFadeIn(true);
+        setTimeout(() => setFadeIn(false), 1000);  
+    }
+}, [location.pathname]);
 
   
 
@@ -58,7 +67,7 @@ export default function Header() {
 
   return (
   <div>
-      <header className="header">
+      <header className={`header ${fadeIn ? 'fadeIn' : ''}`}>
       <nav className="navigation">
       <div className="homedirectory">
         <RedirectHomeButton />

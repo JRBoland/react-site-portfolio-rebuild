@@ -112,6 +112,20 @@ nav {
   }
 }
 
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+}
+
 @media only screen and (max-width: 800px) {
   .header {
     height: 25dvh;

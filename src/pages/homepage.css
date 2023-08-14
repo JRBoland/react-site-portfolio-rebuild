@@ -59,6 +59,8 @@
   background-size: 500% auto;
   animation: textShine 10s ease-in-out infinite alternate;
   filter: drop-shadow(1px 1px 128px var(--color1));
+  letter-spacing: 1px;
+  border:
 }
 
 @media only screen and (max-width: 768px) {
