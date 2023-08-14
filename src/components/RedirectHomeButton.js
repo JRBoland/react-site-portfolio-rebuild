@@ -1,9 +1,9 @@
-import React from "react";
-import './redirecthomebutton.css';
+import React from 'react'
+import './redirecthomebutton.css'
 
 export function RedirectHomeButton() {
   const changeRedirectStatus = () => {
-    window.location.href = "/";
+    window.location.href = '/'
   }
 
   return (
@@ -12,5 +12,5 @@ export function RedirectHomeButton() {
         <h2 className="home-nav">./JB</h2>
       </button>
     </div>
-  );
+  )
 }

@@ -25,26 +25,24 @@
   color: var(--color2);
   font-size: 3em;
   padding: 0 0.5em;
-
 }
 
 .contact-list > li > a > span {
   color: var(--color2);
   font-size: 3em;
   padding: 0 0.5em;
+  min-width: 2.1em;
 }
 
 .contact-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
 }
 
 .contact-list > li {
   display: flex;
   line-height: 4em;
-
 }
 
 .contact-list a {
@@ -60,4 +58,13 @@
 
 .contact-list a:active {
   transform: translateY(-1px);
+}
+
+@media only screen and (max-width: 368px) {
+  .contact-list > li > a > span {
+    color: var(--color2);
+    font-size: 2em;
+    padding: 0 0.5em;
+    min-width: 1em;
+  }
 }

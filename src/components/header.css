@@ -1,4 +1,4 @@
-.header{
+.header {
   background: linear-gradient(to bottom, var(--color5), 60%, transparent);
   height: 12dvh;
   position: fixed;
@@ -8,17 +8,13 @@
   z-index: 1;
 }
 
-
-
 nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   line-height: 4em;
   height: 1dvh;
-  
 }
-
 
 .navbar {
   display: flex;
@@ -47,12 +43,11 @@ nav {
 
 .navbar-link {
   align-items: center;
-  text-decoration: none; 
+  text-decoration: none;
   color: var(--color1);
   padding: 1em;
   opacity: 0.9;
   pointer-events: auto;
-  
 }
 
 .navbar li:hover {
@@ -95,7 +90,12 @@ nav {
 }
 
 .where {
-  background: linear-gradient( to right, var(--color1) 20%, var(--color2) 70%, var(--color3) 80%);
+  background: linear-gradient(
+    to right,
+    var(--color1) 20%,
+    var(--color2) 70%,
+    var(--color3) 80%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -115,6 +115,7 @@ nav {
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
+    transition: opacity 500ms ease-in-out;
   }
   to {
     opacity: 1;
@@ -131,7 +132,7 @@ nav {
     height: 25dvh;
   }
 
-  .homedirectory  {
+  .homedirectory {
     line-height: 1em;
   }
 
@@ -140,7 +141,7 @@ nav {
     flex-direction: row;
     height: 10dvh;
   }
-  
+
   .navbar {
     display: flex;
     list-style-type: none;
@@ -148,10 +149,8 @@ nav {
     height: 10vh;
     align-items: center;
   }
-  
 
-
-  .navbar  {
+  .navbar {
     padding: 0;
     margin: 0;
     display: flex;
@@ -161,9 +160,9 @@ nav {
 
   .navbar-link {
     align-items: center;
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
-    padding: 0.5em;    
+    padding: 0.5em;
     opacity: 0.8;
   }
 
@@ -212,7 +211,7 @@ nav {
     -o-transform-origin: left center;
     transform-origin: left center;
   }
-  
+
   .burger-menu span:nth-child(3) {
     top: 36px;
     -webkit-transform-origin: left center;
@@ -256,7 +255,6 @@ nav {
     width: 100%;
     height: 100dvh;
   }
-  
 
   .mobile-navbar {
     list-style-type: none;
@@ -272,7 +270,4 @@ nav {
     text-decoration: none;
     color: var(--color1);
   }
-
 }
-
-

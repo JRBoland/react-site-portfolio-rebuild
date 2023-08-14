@@ -119,16 +119,7 @@ export function ProjectsPost(props) {
 
   const projectIndex = projects.findIndex(
     (project) => project.id === parseInt(id)
-  ) // find the project with the matching id
-
-  //to come back to
-  //if (projectIndex <= 0 && (projectIndex > projects.length)) {
-  //  return (
-  //    <div>
-  //      <p>Page not found.</p>
-  //    </div>
-  //  )
-  //}
+  )
 
   const project = projects[projectIndex]
 
@@ -219,7 +210,7 @@ export function ProjectsPost(props) {
                 className="project-navigation-links left"
               >
                 <p>
-                &nbsp;next project
+                  &nbsp;next project
                   <FontAwesomeIcon icon={faArrowRight} />
                 </p>
               </Link>

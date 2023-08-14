@@ -55,16 +55,14 @@
   text-align: left;
 }
 
-
 .project-navigation-links p {
   color: var(--color2);
   opacity: 0.8;
 }
 
 .project-navigation-links {
-  text-decoration: none; 
+  text-decoration: none;
 }
-
 
 .project-navigation-links p:hover {
   transform: translateY(-1px);
@@ -76,14 +74,12 @@
   transform: rotateY(0.02turn);
 }
 
-
 .blog-post-img {
   min-width: 80%;
   max-width: 100%;
   height: auto;
-   border-radius: 4px;
+  border-radius: 4px;
 }
-
 
 @media only screen and (max-width: 768px) {
   .projects-post {

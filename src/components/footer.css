@@ -7,9 +7,7 @@
   display: flex;
   align-items: flex-end;
   z-index: 1;
-
 }
-
 
 .links {
   display: flex;
@@ -20,23 +18,19 @@
 }
 
 .copyright {
-  font-size: 0.8em;
-  padding: 0.6em;
-  display: flex;;
+  font-size: 12px;
+  padding: 0em;
+  display: flex;
   justify-content: flex-end;
   opacity: 0.5;
   color: var(--color4);
   font-style: italic;
-
 }
-
 
 .contact-info a {
   text-decoration: none;
   color: inherit;
   pointer-events: auto;
-  
-  
 }
 
 .contact-info a:hover {
@@ -47,7 +41,6 @@
 .contact-info a:active {
   transform: translateY(-0px);
 }
-
 
 @media only screen and (max-width: 768px) {
   .contact-info {
