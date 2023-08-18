@@ -104,7 +104,7 @@ export function ProjectsPost(props) {
       description:
         'Van hiring service with integrated frontend and backend with user profiles, booking and availability system, and review system. Full stack MERN application styled with Tailwind.',
       contents:
-        'Created as part of the final project for Coder Academy. Features include user registration, profile management, availability checks, booking system, review system as well as additional admin level permissions (User/Van/Booking/Review CRUD). View the docs on GitHub for an in depth breakdown on the build and the sites features',
+        'Created as part of the final project for Coder Academy. Features include user registration, profile management, availability checks, booking system, review system as well as additional admin level permissions (User/Van/Booking/Review CRUD). View the docs on GitHub for an in depth breakdown on the build and the sites features.',
       link: 'https://github.com/van-voyagers/T3A2-A-van-voyage-docs',
       live: 'https://van-voyage.netlify.app/',
     },

@@ -80,7 +80,7 @@ export function Projects(props) {
       date: 'July 2023',
       image: `${blogImage7}`,
       description:
-        'Van hiring service with integrated frontend and backend with user profiles, booking and availability system, and review system. Full stack MERN application styled with Tailwind.',
+        'Van hiring service with integrated frontend and backend with user profiles, booking and availability system, and review system. Full stack MERN application styled with Tailwind',
     },
   ]
 
