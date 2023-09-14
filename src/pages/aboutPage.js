@@ -76,11 +76,15 @@ export function About(props) {
                 <a
                   href="https://open.spotify.com/artist/5kYuYclOITzjaaYLAT42gK"
                   className="download-link-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   'bondla'
                 </a>
                 ) and towards the end of 2021, I started my own small business{' '}
-                <a href="https://podcusts-react.vercel.app/" className="download-link-link">
+                <a href="https://podcusts-react.vercel.app/" className="download-link-link"
+                target="_blank"
+                rel="noopener noreferrer">
                   Podcusts
                 </a>
                 , delivering custom podcast audio intros and outros, tailored to
@@ -92,6 +96,8 @@ export function About(props) {
                 <a
                   href="https://podcusts.wixsite.com/website-2/"
                   className="download-link-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Wix
                 </a>{' '}
