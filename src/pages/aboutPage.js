@@ -82,9 +82,12 @@ export function About(props) {
                   'bondla'
                 </a>
                 ) and towards the end of 2021, I started my own small business{' '}
-                <a href="https://podcusts.com" className="download-link-link"
-                target="_blank"
-                rel="noopener noreferrer">
+                <a
+                  href="https://podcusts.com"
+                  className="download-link-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Podcusts
                 </a>
                 , delivering custom podcast audio intros and outros, tailored to
@@ -195,6 +198,8 @@ export function About(props) {
                 <a
                   href="https://van-voyage.netlify.app"
                   className="download-link-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   full stack booking application
                 </a>{' '}
