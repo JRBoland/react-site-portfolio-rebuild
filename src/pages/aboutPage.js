@@ -81,7 +81,7 @@ export function About(props) {
                 </a>
                 ) and towards the end of 2021, I started my own small business{' '}
                 <a href="https://www.podcusts.com" className="download-link-link">
-                  "Podcusts"
+                  Podcusts
                 </a>
                 , delivering custom podcast audio intros and outros, tailored to
                 the clients specifications. It was in developing this small side
