@@ -80,13 +80,15 @@ export function About(props) {
                   'bondla'
                 </a>
                 ) and towards the end of 2021, I started my own small business
-                "Podcusts", delivering custom podcast audio intros and outros,
-                tailored to the clients specifications. It was in developing
-                this small side business (which is still running, though
-                infrequent) that I stumbled across web development. I found I
-                was really drawn to the whole "creating a website" part of
-                starting a business, using site builders like Webflow (which
-                didn't work) and{' '}
+                <a href="https://podcusts.com" className="download-link-link">
+                  "Podcusts"
+                </a>
+                , delivering custom podcast audio intros and outros, tailored to
+                the clients specifications. It was in developing this small side
+                business (which is still running, though infrequent) that I
+                stumbled across web development. I found I was really drawn to
+                the whole "creating a website" part of starting a business,
+                using site builders like Webflow (which didn't work) and{' '}
                 <a
                   href="https://podcusts.wixsite.com/website-2/"
                   className="download-link-link"
@@ -119,8 +121,8 @@ export function About(props) {
                 <br />
                 I've recently completed a Full Stack Web Development Bootcamp
                 with Coder Academy, (Diploma of Information Technology), where I
-                completed my studies with a High Distinction average (Weighted Average Mark of 90.33%) throughout
-                all terms.
+                completed my studies with a High Distinction average (Weighted
+                Average Mark of 90.33%) throughout all terms.
               </p>
             </div>
             <div
