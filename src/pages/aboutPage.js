@@ -82,7 +82,7 @@ export function About(props) {
                   'bondla'
                 </a>
                 ) and towards the end of 2021, I started my own small business{' '}
-                <a href="https://podcusts-react.vercel.app/" className="download-link-link"
+                <a href="https://podcusts.com" className="download-link-link"
                 target="_blank"
                 rel="noopener noreferrer">
                   Podcusts
