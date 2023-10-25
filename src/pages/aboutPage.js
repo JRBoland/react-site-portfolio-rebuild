@@ -131,7 +131,7 @@ export function About(props) {
                 I've recently completed a Full Stack Web Development Bootcamp
                 with Coder Academy, (Diploma of Information Technology), where I
                 completed my studies with a High Distinction average (Weighted
-                Average Mark of 90.33%) throughout all terms.
+                Average Mark of 90.12%) throughout all terms.
               </p>
             </div>
             <div
