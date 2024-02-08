@@ -105,7 +105,7 @@ export function Projects(props) {
           data-aos-easing="ease-in-out"
         >
           <h1 className="h2-fa-icon">
-            <span>Projects</span>
+            <span>Projects</span>{''}
             <FontAwesomeIcon
               icon={faDiagramProject}
               className="h2-fa-icon-dec"
