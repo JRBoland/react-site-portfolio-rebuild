@@ -110,7 +110,7 @@ export function ProjectsPost(props) {
       live: 'https://van-voyage.netlify.app/',
     },
     {
-      id: 7,
+      id: 8,
       title: 'Fliight Technologies Website rebuild',
       //post-image: ,
       date: 'In progress, project started October 2023',
