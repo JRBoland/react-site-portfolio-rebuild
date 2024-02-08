@@ -8,6 +8,7 @@ import blogImage4 from '../images/blog-image-4.jpg'
 import blogImage5 from '../images/blog-image-5.jpg'
 import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
+import blogImage8 from '../images/blog-image-8.gif'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -108,8 +109,22 @@ export function ProjectsPost(props) {
       link: 'https://github.com/van-voyagers/T3A2-A-van-voyage-docs',
       live: 'https://van-voyage.netlify.app/',
     },
+    {
+      id: 7,
+      title: 'Fliight Technologies Website rebuild',
+      //post-image: ,
+      date: 'In progress, project started October 2023',
+      image: `${blogImage8}`,
+      description:
+        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',
+      contents:
+        'Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. The website is almost ready for deployment, still awaiting additional content and minor bug fixes. Built using React and TailwindCSS, to be deployed with Netlify.',
+      link: '',
+      live: '',
+    },
   ]
 
+  
   const { id } = useParams() // Retrieve the project ID from the URL parameter
 
   useEffect(() => {

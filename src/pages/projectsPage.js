@@ -8,6 +8,7 @@ import blogImage4 from '../images/blog-image-4.jpg'
 import blogImage5 from '../images/blog-image-5.jpg'
 import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
+import blogImage8 from '../images/blog-image-8.gif'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -81,6 +82,15 @@ export function Projects(props) {
       image: `${blogImage7}`,
       description:
         'Van hiring service with integrated frontend and backend with user profiles, booking and availability system, and review system. Full stack MERN application styled with Tailwind',
+    },
+    {
+      id: 8,
+      title: 'Fliight Technologies Website rebuild. In progress',
+      //post-image: ,
+      date: 'Working on this right now',
+      image: `${blogImage8}`,
+      description:
+        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',
     },
   ]
 

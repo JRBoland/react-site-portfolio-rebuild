@@ -206,8 +206,7 @@ export function About(props) {
                 with the MERN stack (MongoDB, Express.js, React, Node.js).
                 <br />
                 <br />
-                I'm currently doing some additional freelance work, working with
-                WordPress (something new to me!) and React.
+                I'm currently doing some freelance work, building a website for a local technology company, and leveraging new AI tools (CrewAI and Vertex AI) with ChatGPT integration to create commodity analysis reports for a produce logistics company.  
               </p>
             </div>
             <div
