@@ -113,7 +113,7 @@ export function ProjectsPost(props) {
       id: 8,
       title: 'Fliight Technologies Website rebuild',
       //post-image: ,
-      date: 'In progress, project started October 2023',
+      date: 'In progress',
       image: `${blogImage8}`,
       description:
         'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',

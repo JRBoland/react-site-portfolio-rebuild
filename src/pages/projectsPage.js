@@ -85,12 +85,12 @@ export function Projects(props) {
     },
     {
       id: 8,
-      title: 'Fliight Technologies Website rebuild. In progress',
+      title: 'Fliight Technologies: Website Rebuild',
       //post-image: ,
       date: 'Working on this right now',
       image: `${blogImage8}`,
       description:
-        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',
+        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress near completion. Built using React and TailwindCSS',
     },
   ]
 
