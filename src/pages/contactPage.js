@@ -23,7 +23,7 @@ export function Contact(props) {
   return (
     <div className="contact">
       <ul
-        class="contact-list"
+        className="contact-list"
         data-aos="fade-in"
         data-aos-anchor-placement="center-bottom"
       >

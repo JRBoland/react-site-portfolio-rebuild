@@ -118,8 +118,22 @@ export function ProjectsPost(props) {
       description:
         'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',
       contents:
-        'Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. The website is almost ready for deployment, still awaiting additional content and minor bug fixes. Built using React and TailwindCSS, to be deployed with Netlify.',
+        (<span>Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. The website is almost ready for deployment, still awaiting additional content and minor bug fixes. Built using React and TailwindCSS, to be deployed with Netlify.<br/><br/>You can view its current state <a href="https://fliight-technologies-demo-site.netlify.app/" target="_blank" rel="noopener noreferrer" className="download-link-link">here</a>.</span>),
       link: '',
+      live: '',
+    },
+    {
+      id: 9,
+      title: 'Drone Flight Logger: Full Stack Mobile App',
+      //post-image: ,
+      date: 'April 2024',
+      image: `${blogImage8}`,
+      description:
+        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend.',
+      contents:
+        (<span>Full Stack mobile app to record drone flight logs. UI built in React Native Expo with a NestJs API backend, connected to a PostgreSQL database. Varying role permissions based on user authentication and authorsation (guest, user, admin). Full CRUD functionality with Pilot, Flight and Drone entities on the frontend and additional User entity on the server side.
+        Frontend made for both android and iOS mobile devices. Backend has unit tests written with Jest and containerised using Docker Compose. <br/><br/>You can view the repo for the backend <a href="https://github.com/JRBoland/nestjs-drone-api" target="_blank" rel="noopener noreferrer" className="download-link-link">here</a>, or the repo for the UI below.</span>),
+      link: 'https://github.com/JRBoland/drone-api-ui/',
       live: '',
     },
   ]

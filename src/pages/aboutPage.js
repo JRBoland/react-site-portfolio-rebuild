@@ -39,12 +39,8 @@ export function About(props) {
                 I enjoy making things.
                 <br />
                 <br />
-                I'm an aspiring developer who has recently completed studying a
-                Diploma of IT with Coder Academy.
-                <br />
-                <br />
-                I've been studying web development since August 2022, where I
-                started self-teaching using various online resources{' '}
+                I've been honing my skills in web development since August 2022,
+                where I started self-teaching using various online resources{' '}
                 <em>(thank you theodinproject)</em>.
                 <br />
                 <br />
@@ -52,7 +48,15 @@ export function About(props) {
                 building something from nothing, and soon found myself enrolling
                 for Coder Academy's October intake of their Full Stack Web
                 Development course. I've been studying with them since October
-                2022 and completed my studies in August this year (2023).
+                2022 and completed my studies in August 2023.
+                <br />
+                <br />
+                Since then, I have taken on various freelance{' '}
+                <Link to="/projects" className="download-link-link">
+                  projects
+                </Link>{' '}
+                and undergone mentorship in building projects using varying
+                different technologies.
                 <br />
                 <br />
                 <em>A little bit on how I got here:</em>
@@ -211,8 +215,9 @@ export function About(props) {
                   rel="noopener noreferrer"
                 >
                   full stack drone flight logger
-                </a> mobile application with TypeScript, using Expo & React Native.
-                </p>
+                </a>{' '}
+                mobile application with TypeScript, using Expo & React Native.
+              </p>
             </div>
             <div
               data-aos="fade-in"

@@ -92,6 +92,15 @@ export function Projects(props) {
       description:
         'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress near completion. Built using React and TailwindCSS',
     },
+    {
+      id: 9,
+      title: 'Drone Flight Logger: Full Stack Mobile App',
+      //post-image: ,
+      date: 'April 2024',
+      image: `${blogImage8}`,
+      description:
+        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend.',
+    },
   ]
 
   projects.reverse()
@@ -105,7 +114,8 @@ export function Projects(props) {
           data-aos-easing="ease-in-out"
         >
           <h1 className="h2-fa-icon">
-            <span>Projects</span>{''}
+            <span>Projects</span>
+            {''}
             <FontAwesomeIcon
               icon={faDiagramProject}
               className="h2-fa-icon-dec"

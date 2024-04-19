@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div>
       <footer className="footer">
-        <div class="contact-info">
+        <div className="contact-info">
           <a
             href="https://www.linkedin.com/in/jamesrboland/"
             target="_blank"
@@ -23,7 +23,7 @@ export default function Footer() {
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
-        <div class="links">
+        <div className="links">
           <span className="copyright">
             &copy; James Boland 2022. All rights reserved.
           </span>
