@@ -9,6 +9,7 @@ import blogImage5 from '../images/blog-image-5.jpg'
 import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
 import blogImage8 from '../images/blog-image-8.gif'
+import blogImage9 from '../images/blog-image-9.gif'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -127,7 +128,7 @@ export function ProjectsPost(props) {
       title: 'Drone Flight Logger: Full Stack Mobile App',
       //post-image: ,
       date: 'April 2024',
-      image: `${blogImage8}`,
+      image: `${blogImage9}`,
       description:
         'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend.',
       contents:
