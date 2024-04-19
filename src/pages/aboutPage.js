@@ -203,11 +203,16 @@ export function About(props) {
                 >
                   full stack booking application
                 </a>{' '}
-                with the MERN stack (MongoDB, Express.js, React, Node.js).
-                <br />
-                <br />
-                I'm currently doing some freelance work, building a website for a local technology company, and leveraging new AI tools (CrewAI and Vertex AI) with ChatGPT integration to create commodity analysis reports for a produce logistics company.  
-              </p>
+                and a{' '}
+                <a
+                  href="https://github.com/JRBoland/drone-api-ui/"
+                  className="download-link-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  full stack drone flight logger
+                </a> mobile application with TypeScript, using Expo & React Native.
+                </p>
             </div>
             <div
               data-aos="fade-in"
@@ -224,10 +229,13 @@ export function About(props) {
                   <ul>
                     <li>Python</li>
                     <li>JavaScript</li>
+                    <li>TypeScript</li>
                     <li>MongoDB</li>
                     <li>Express.js</li>
                     <li>React</li>
+                    <li>React Native</li>
                     <li>Node.js</li>
+                    <li>Nestjs</li>
                     <li>Flask</li>
                     <li>MongoDB Atlas</li>
                     <li>Render</li>
@@ -242,11 +250,14 @@ export function About(props) {
                     <li>Git</li>
                     <li>Postman</li>
                     <li>Insomnia</li>
+                    <li>Thunder Client</li>
                     <li>Figma</li>
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>Tailwind</li>
                     <li>Sass</li>
+                    <li>Expo (React Native)</li>
+                    <li>Docker</li>
                   </ul>
                 </div>
               </div>
