@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom'
+import jbResume from '../images/jamesboland-resume.pdf'
 
 export function Home(props) {
   useEffect(() => {
@@ -22,13 +23,41 @@ export function Home(props) {
           </span>
         </p>
         <br />
-        <p className="welcome-text" data-aos="fade-in" data-aos-delay="2500">
-          I'm a Junior Developer and recent graduate of
-          <a className="coder-link" href="https://coderacademy.edu.au/">
+        <p className="welcome-text" data-aos="fade-in" data-aos-delay="2000">
+          I'm a
+          <a
+            href="https://github.com/JRBoland"
+            className="download-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {' '}
-            Coder Academy.
+            Web Developer,{' '}
           </a>
+          hobbyist
+          <a
+            href="https://open.spotify.com/artist/5kYuYclOITzjaaYLAT42gK"
+            className="download-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            Music Producer,
+          </a>{' '}
+          and all round lover of emerging technology.
+          <br />
+          <br />
         </p>
+        <span className="welcome-text" data-aos="fade-in" data-aos-delay="3000">
+          <Link
+            to={jbResume}
+            target="_blank"
+            download
+            className="download-link-link"
+          >
+            <span className="download-link"> Download my resume here.</span>
+          </Link>
+        </span>
       </main>
     </div>
   )
