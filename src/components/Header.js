@@ -44,14 +44,7 @@ export default function Header() {
         <nav className="navigation">
           <div className="homedirectory">
             <RedirectHomeButton />
-            <span
-              className="where"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-              data-aos-delay="100"
-            >
-              {currentPage}
-            </span>
+            <span className="where">{currentPage}</span>
           </div>
           {isMobile ? (
             <>

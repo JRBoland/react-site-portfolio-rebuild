@@ -75,3 +75,14 @@
     max-width: 66dvw;
   }
 }
+
+.welcome-text .clear-span {
+  animation: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: initial;
+  background: none;
+  color: var(--color1); /* Ensuring it uses the default text color */
+  background-size: auto;
+}
+
