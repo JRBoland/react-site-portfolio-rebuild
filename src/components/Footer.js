@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
         <div className="links">
           <span className="copyright">
-            &copy; James Boland 2022. All rights reserved.
+            &copy; James Boland 2024. All rights reserved.
           </span>
         </div>
       </footer>
