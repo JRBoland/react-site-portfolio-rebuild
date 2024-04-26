@@ -56,7 +56,7 @@ export function About(props) {
                   projects
                 </Link>{' '}
                 and undergone mentorship in building projects using varying
-                different technologies.
+                different technologies. I'm excited about the direction and future of technology and code, with a keen interest and curiousity on AI, LLMs and the waves of emerging AI tools.
                 <br />
                 <br />
                 <em>A little bit on how I got here:</em>
