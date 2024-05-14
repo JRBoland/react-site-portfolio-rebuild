@@ -114,14 +114,14 @@ export function ProjectsPost(props) {
       id: 8,
       title: 'Fliight Technologies Website rebuild',
       //post-image: ,
-      date: 'In progress',
+      date: 'October 2024',
       image: `${blogImage8}`,
       description:
-        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress, awaiting content and final bug fixes before live deployment.',
+        'Website rebuild for UAV technology company, Fliight Technologies.',
       contents:
-        (<span>Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. The website is almost ready for deployment, still awaiting additional content and minor bug fixes. Built using React and TailwindCSS, to be deployed with Netlify.<br/><br/>You can view its current state <a href="https://fliight-technologies-demo-site.netlify.app/" target="_blank" rel="noopener noreferrer" className="download-link-link">here</a>.</span>),
-      link: '',
-      live: '',
+        "Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. Worked closely with a designer to deliver a site adhering to client's budget constraints. Built using React and TailwindCSS, to be deployed with Netlify. EmailJS and Google reCAPTCHA used with contact forms. Final live version deployed May 2024.",
+      link: 'https://github.com/JRBoland/fliight-technologies',
+      live: 'https://fliight.com.au',
     },
     {
       id: 9,
