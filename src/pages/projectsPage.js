@@ -88,10 +88,10 @@ export function Projects(props) {
       id: 8,
       title: 'Fliight Technologies: Website Rebuild',
       //post-image: ,
-      date: 'Working on this right now',
+      date: 'October 2024',
       image: `${blogImage8}`,
       description:
-        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress near completion. Built using React and TailwindCSS',
+        'Website rebuild for UAV technology company, Fliight Technologies. Built using React and TailwindCSS',
     },
     {
       id: 9,
