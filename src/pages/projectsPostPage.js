@@ -119,9 +119,9 @@ export function ProjectsPost(props) {
       description:
         'Website rebuild for UAV technology company, Fliight Technologies.',
       contents:
-        "Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. Worked closely with a designer to deliver a site adhering to client's budget constraints. Built using React and TailwindCSS, to be deployed with Netlify. EmailJS and Google reCAPTCHA used with contact forms. Final live version deployed May 2024.",
+        (<span>Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. Worked and regularly communicated with client to deliver a site adhering to client's budget constraints. Built using React and TailwindCSS, to be deployed with Netlify. EmailJS and Google reCAPTCHA. Final live version to be deployed May 2024. Check out the demo <a href="https://fliight-technologies-demo-site.netlify.app" target="_blank" rel="noopener noreferrer" className="download-link-link">here.</a> </span>),
       link: 'https://github.com/JRBoland/fliight-technologies',
-      live: 'https://fliight.com.au',
+      live: '',
     },
     {
       id: 9,
