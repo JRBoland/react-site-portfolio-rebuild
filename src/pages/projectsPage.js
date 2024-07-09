@@ -1,4 +1,4 @@
-import './projectspage.css'
+import './pageStyles/projectspage.css'
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import blogImage1 from '../images/blog-image-1.jpg'

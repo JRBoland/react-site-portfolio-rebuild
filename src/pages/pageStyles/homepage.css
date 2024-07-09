@@ -1,15 +1,22 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100% - 4rem);
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80dvh;
+  height: 60dvh;
   margin-top: 12dvh;
-  width: min(100% - 4rem);
-  margin-inline: auto;
-  position: relative;
+  width: 100%;
   z-index: 0;
-  overflow: hidden;
 }
 
 .welcome-div > p {
@@ -35,8 +42,10 @@
 }
 
 .welcome-div {
-  width: fit-content;
+  width: 100%;
   color: var(--color2);
+  max-width: 80%; /* Ensure welcome-div doesn't exceed 80% of the parent width */
+  text-align: center; /* Center align text */
 }
 
 .welcome-div span {
@@ -64,15 +73,25 @@
   letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 880px) {
   .home {
     text-align: center;
+    height: 30dvh;
+    margin: 12rem 0 4rem;
   }
 
   .welcome-div {
-    width: fit-content;
     line-height: 2em;
-    max-width: 66dvw;
+  }
+
+  .feedback-content {
+    padding: 0;
+    margin-bottom: 4em;
+  }
+
+  .feedback-content > p {
+    font-weight: 200;
+    font-style: normal;
   }
 }
 
@@ -86,3 +105,41 @@
   background-size: auto;
 }
 
+.feedback-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1.5s ease-in-out; /* Transition for fade-in effect */
+}
+
+.feedback-container.show-feedback {
+  opacity: 1; /* Fade in when class is added */
+}
+
+.feedback-content {
+  max-width: 80%;
+  width: 100%;
+  color: var(--color1);
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: 0.01px;
+  text-align: left;
+  /*padding: 1rem;*/
+  box-sizing: border-box;
+  /*outline: 1px solid green;*/ /* For development visibility */
+}
+
+.feedback-provider {
+  margin-top: 1em;
+  width: fit-content;
+  color: var(--color1);
+  font-style: italic;
+  text-align: left;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.01px;
+  margin-left: auto;
+}

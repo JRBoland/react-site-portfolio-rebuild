@@ -1,4 +1,3 @@
-import './aboutpage.css'
 import React, { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -14,6 +13,7 @@ import jbImage from '../images/jbimage.jpg'
 import jbResume from '../images/jamesboland-resume.pdf'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import './pageStyles/aboutpage.css'
 
 export function About(props) {
   useEffect(() => {

@@ -5,7 +5,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import './contactpage.css'
+import './pageStyles/contactpage.css'
 
 export function Contact(props) {
   useEffect(() => {
