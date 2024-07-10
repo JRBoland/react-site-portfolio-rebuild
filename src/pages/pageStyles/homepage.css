@@ -1,5 +1,7 @@
 .container {
   position: relative;
+  height: 100vh; /* Ensure the container takes the full viewport height */
+  overflow: hidden; /* Hide any overflow */
 }
 
 .home {
@@ -7,8 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  margin-top: 12vh;
+  height: 100%;
   width: min(100% - 4rem);
   margin-inline: auto;
   position: absolute;
@@ -16,7 +17,6 @@
   left: 0;
   right: 0;
   z-index: 0;
-  overflow: hidden;
 }
 
 .home.hide {
@@ -49,6 +49,16 @@
 
 .welcome-text.welcome-text-span:hover {
   color: var(--color1);
+}
+
+.welcome-text .clear-span {
+  animation: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: initial;
+  background: none;
+  color: var(--color1); /* Ensuring it uses the default text color */
+  background-size: auto;
 }
 
 .welcome-div {
@@ -180,6 +190,12 @@
   align-items: center;
   opacity: 0;
   overflow: hidden;
+  pointer-events: none; /* Disable pointer events by default */
+}
+
+.final-message.visible {
+  opacity: 1;
+  pointer-events: auto; /* Enable pointer events when visible */
 }
 
 .final-message-content p {

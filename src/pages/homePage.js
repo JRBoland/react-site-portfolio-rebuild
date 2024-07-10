@@ -232,10 +232,12 @@ export function Home(props) {
           </animated.div>
         ) : null
       )}
-      <animated.div className="final-message" style={finalMessageProps}>
+      <animated.div
+        className={`final-message ${showFinalMessage ? 'visible' : ''}`}
+        style={finalMessageProps}
+      >
         <div className="final-message-content">
           <p className="welcome-text">
-            {' '}
             you can find out a bit more
             <ul>
               <li className="clear-span">
