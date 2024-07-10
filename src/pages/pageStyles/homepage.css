@@ -170,3 +170,37 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.final-message {
+  padding-top: 20rem;
+  height: 80dvh;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.final-message-content p {
+  color: var(--color1);
+}
+
+.final-message-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.final-message-content li {
+  margin: 1rem 0;
+}
+
+.final-message-content a {
+  color: var(--color2);
+  text-decoration: none;
+}
+
+.final-message-content a:hover {
+  opacity: 0.7;
+  transform: translateY(2px);
+}

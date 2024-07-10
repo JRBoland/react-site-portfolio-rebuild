@@ -27,6 +27,7 @@ const feedbackList = [
 export function Home(props) {
   const [show, setShow] = useState(true)
   const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(-1)
+  const [showFinalMessage, setShowFinalMessage] = useState(false)
   const [scrollTimeout, setScrollTimeout] = useState(null)
   const [scrollDirection, setScrollDirection] = useState('down')
   const [scrollDelta, setScrollDelta] = useState(0)
@@ -52,7 +53,7 @@ export function Home(props) {
     enter: (item) => ({
       opacity: 1,
       transform: 'translateY(0px)',
-      delay: item === 0 ? 300 : 700, // Reduce delay for the first feedback
+      delay: item === 0 ? 300 : 600, // Reduce delay for the first feedback
     }),
     leave: {
       opacity: 0,
@@ -60,6 +61,21 @@ export function Home(props) {
         scrollDirection === 'down' ? 'translateY(-60px)' : 'translateY(60px)',
     },
     config: { mass: 2.5, tension: 100, friction: 20 }, // Adjusting spring physics
+    onRest: () => {
+      if (
+        currentFeedbackIndex === feedbackList.length &&
+        scrollDirection === 'down'
+      ) {
+        setShowFinalMessage(true)
+      }
+    },
+  })
+
+  const finalMessageProps = useSpring({
+    opacity: showFinalMessage ? 1 : 0,
+    transform: showFinalMessage ? 'translateY(0px)' : 'translateY(40px)',
+    config: { mass: 2.5, tension: 100, friction: 20 },
+    delay: show ? 400 : 0,
   })
 
   useEffect(() => {
@@ -81,13 +97,16 @@ export function Home(props) {
               // User scrolled down
               if (show) {
                 setShow(false)
-              } else if (currentFeedbackIndex < feedbackList.length - 1) {
+              } else if (currentFeedbackIndex < feedbackList.length) {
                 handleNextFeedback()
               }
             } else {
               setScrollDirection('up')
               // User scrolled up
-              if (currentFeedbackIndex === 0) {
+              if (showFinalMessage) {
+                setShowFinalMessage(false)
+                setCurrentFeedbackIndex(feedbackList.length - 1)
+              } else if (currentFeedbackIndex === 0) {
                 setShow(true)
                 setCurrentFeedbackIndex(-1)
               } else if (currentFeedbackIndex > 0) {
@@ -104,11 +123,11 @@ export function Home(props) {
     return () => {
       window.removeEventListener('wheel', handleWheel)
     }
-  }, [show, currentFeedbackIndex, scrollTimeout, scrollDelta])
+  }, [show, currentFeedbackIndex, showFinalMessage, scrollTimeout, scrollDelta])
 
   const handleNextFeedback = () => {
     setCurrentFeedbackIndex((prevIndex) =>
-      Math.min(prevIndex + 1, feedbackList.length - 1)
+      Math.min(prevIndex + 1, feedbackList.length)
     )
   }
 
@@ -191,7 +210,7 @@ export function Home(props) {
         </main>
       </animated.div>
       {feedbackTransition((style, index) =>
-        index >= 0 ? (
+        index >= 0 && index < feedbackList.length ? (
           <animated.div className="home show" style={style}>
             <main className="feedback-container show-feedback">
               <div className="feedback-content">
@@ -213,6 +232,26 @@ export function Home(props) {
           </animated.div>
         ) : null
       )}
+      <animated.div className="final-message" style={finalMessageProps}>
+        <div className="final-message-content">
+          <p className="welcome-text">
+            {' '}
+            you can find out a bit more
+            <ul>
+              <li className="clear-span">
+                <Link to="/about">about me,</Link>
+              </li>
+              <li>
+                <Link to="/projects">my projects,</Link>
+              </li>
+              or feel free to
+              <li>
+                <Link to="/contact">get in touch.</Link>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </animated.div>
     </div>
   )
 }
