@@ -1,24 +1,124 @@
-import React, { useEffect } from 'react'
+import './pageStyles/homepage.css'
+import React, { useEffect, useState } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom'
 import jbResume from '../images/jamesboland-resume.pdf'
-import './pageStyles/homepage.css'
+import { useSpring, animated, useTransition } from '@react-spring/web'
+
+const feedbackList = [
+  {
+    content:
+      "James did a fantastic job developing the Fliight Technologies website. It's incredibly smooth, mobile-friendly, and aesthetically pleasing. He was a pleasure to work with, displaying patience and professionalism as we sorted through a large amount of content. We also faced some unforeseen issues during the process, which he took in stride, ensuring everything was handled seamlessly. We couldn't be happier with the result and highly recommend James for any web development needs.",
+    provider: 'Jonathan Clark\nHead of Engineering\nFliight Technologies',
+  },
+  {
+    content:
+      "James was instrumental in helping us modernize our tech stack and streamline our processes. His expertise in web development and project management ensured our project's success.",
+    provider: 'Sarah Johnson\nCTO\nTech Innovators',
+  },
+  {
+    content:
+      'Working with James was a pleasure. His attention to detail and dedication to delivering high-quality work exceeded our expectations.',
+    provider: 'Michael Adams\nProject Manager\nCreative Solutions',
+  },
+]
 
 export function Home(props) {
+  const [show, setShow] = useState(true)
+  const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(-1)
+  const [scrollTimeout, setScrollTimeout] = useState(null)
+  const [scrollDirection, setScrollDirection] = useState('down')
+  const [scrollDelta, setScrollDelta] = useState(0)
+
+  const fadeProps = useSpring({
+    opacity: show ? 1 : 0,
+    transform: show ? 'translateY(0px)' : 'translateY(-40px)',
+    config: { mass: 3, tension: 100, friction: 20 }, // Adjusting spring physics
+    delay: show ? 400 : 0,
+    onRest: () => {
+      if (!show && currentFeedbackIndex === -1) {
+        setCurrentFeedbackIndex(0)
+      }
+    },
+  })
+
+  const feedbackTransition = useTransition(currentFeedbackIndex, {
+    from: {
+      opacity: 0,
+      transform:
+        scrollDirection === 'down' ? 'translateY(60px)' : 'translateY(-60px)',
+    },
+    enter: (item) => ({
+      opacity: 1,
+      transform: 'translateY(0px)',
+      delay: item === 0 ? 300 : 700, // Reduce delay for the first feedback
+    }),
+    leave: {
+      opacity: 0,
+      transform:
+        scrollDirection === 'down' ? 'translateY(-60px)' : 'translateY(60px)',
+    },
+    config: { mass: 2.5, tension: 100, friction: 20 }, // Adjusting spring physics
+  })
+
   useEffect(() => {
     Aos.init({ duration: 2000, easing: 'ease-out-cubic' })
 
-    // Manually delay the feedback container
-    const feedbackContainer = document.querySelector('.feedback-container')
-    setTimeout(() => {
-      feedbackContainer.classList.add('show-feedback')
-    }, 4000) // Delay of 4 seconds (4000ms)
-  }, [])
+    const handleWheel = (event) => {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout)
+      }
+
+      setScrollDelta((prevDelta) => prevDelta + event.deltaY)
+
+      setScrollTimeout(
+        setTimeout(() => {
+          if (Math.abs(scrollDelta) > 250) {
+            // Increase the threshold for triggering
+            if (scrollDelta > 0) {
+              setScrollDirection('down')
+              // User scrolled down
+              if (show) {
+                setShow(false)
+              } else if (currentFeedbackIndex < feedbackList.length - 1) {
+                handleNextFeedback()
+              }
+            } else {
+              setScrollDirection('up')
+              // User scrolled up
+              if (currentFeedbackIndex === 0) {
+                setShow(true)
+                setCurrentFeedbackIndex(-1)
+              } else if (currentFeedbackIndex > 0) {
+                handlePreviousFeedback()
+              }
+            }
+            setScrollDelta(0) // Reset the scroll delta
+          }
+        }, 300) // Increased debounce timeout
+      )
+    }
+
+    window.addEventListener('wheel', handleWheel)
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+    }
+  }, [show, currentFeedbackIndex, scrollTimeout, scrollDelta])
+
+  const handleNextFeedback = () => {
+    setCurrentFeedbackIndex((prevIndex) =>
+      Math.min(prevIndex + 1, feedbackList.length - 1)
+    )
+  }
+
+  const handlePreviousFeedback = () => {
+    setCurrentFeedbackIndex((prevIndex) => Math.max(prevIndex - 1, 0))
+  }
 
   return (
-    <div className="page-container">
-      <div className="home" data-aos="fade-in" data-aos-easing="ease-in-out">
+    <div className="container" data-aos="fade-in" data-aos-easing="ease-in-out">
+      <animated.div className="home" style={fadeProps}>
         <main className="welcome-div">
           <h1 className="welcome-text" data-aos="fade-in">
             Hi.
@@ -89,28 +189,30 @@ export function Home(props) {
             </Link>
           </span>
         </main>
-      </div>
-      <div className="feedback-container">
-        <div className="feedback-content">
-          <p>
-            " James did a fantastic job developing the Fliight Technologies
-            website. It's incredibly smooth, mobile-friendly, and aesthetically
-            pleasing. He was a pleasure to work with, displaying patience and
-            professionalism as we sorted through a large amount of content. We
-            also faced some unforeseen issues during the process, which he took
-            in stride, ensuring everything was handled seamlessly. We couldn't
-            be happier with the result and highly recommend James for any web
-            development needs."
-          </p>
-          <div className="feedback-provider">
-            Jonathan Clark
-            <br />
-            Head of Engineering
-            <br />
-            Fliight Technologies
-          </div>
-        </div>
-      </div>
+      </animated.div>
+      {feedbackTransition((style, index) =>
+        index >= 0 ? (
+          <animated.div className="home show" style={style}>
+            <main className="feedback-container show-feedback">
+              <div className="feedback-content">
+                <p>{feedbackList[index].content}</p>
+                <div className="feedback-lower-container">
+                  <div className="feedback-provider">
+                    {feedbackList[index].provider
+                      .split('\n')
+                      .map((line, idx) => (
+                        <React.Fragment key={idx}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </main>
+          </animated.div>
+        ) : null
+      )}
     </div>
   )
 }

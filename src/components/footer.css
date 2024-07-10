@@ -27,6 +27,12 @@
   font-style: italic;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-info a {
   text-decoration: none;
   color: inherit;
@@ -44,13 +50,13 @@
 
 @media only screen and (max-width: 768px) {
   .contact-info {
-    margin: 1em;
+    margin: 0.8em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     font-size: 1.5em;
     width: fit-content;
-    height: 4em;
+    height: 5em;
   }
 }

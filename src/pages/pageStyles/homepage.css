@@ -1,11 +1,5 @@
-.page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min(100% - 4rem);
-  margin-inline: auto;
+.container {
   position: relative;
-  overflow: hidden;
 }
 
 .home {
@@ -13,10 +7,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60dvh;
-  margin-top: 12dvh;
-  width: 100%;
+  height: 80vh;
+  margin-top: 12vh;
+  width: min(100% - 4rem);
+  margin-inline: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 0;
+  overflow: hidden;
+}
+
+.home.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .welcome-div > p {
@@ -42,10 +52,8 @@
 }
 
 .welcome-div {
-  width: 100%;
+  width: fit-content;
   color: var(--color2);
-  max-width: 80%; /* Ensure welcome-div doesn't exceed 80% of the parent width */
-  text-align: center; /* Center align text */
 }
 
 .welcome-div span {
@@ -73,45 +81,27 @@
   letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 880px) {
-  .home {
-    text-align: center;
-    height: 30dvh;
-    margin: 12rem 0 4rem;
-  }
-
-  .welcome-div {
-    line-height: 2em;
-  }
-
-  .feedback-content {
-    padding: 0;
-    margin-bottom: 4em;
-  }
-
-  .feedback-content > p {
-    font-weight: 200;
-    font-style: normal;
-  }
+.scroll-div {
+  width: fit-content;
+  color: var(--color2);
 }
 
-.welcome-text .clear-span {
-  animation: none;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: initial;
-  background: none;
-  color: var(--color1); /* Ensuring it uses the default text color */
-  background-size: auto;
+.scroll-div h1 {
+  color: var(--color1);
+}
+
+.scroll-div p {
+  color: var(--color3);
 }
 
 .feedback-container {
-  width: 100%;
+  width: fit-content;
+  max-width: 80ch;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
   opacity: 0; /* Initially hidden */
-  transition: opacity 1.5s ease-in-out; /* Transition for fade-in effect */
+  margin-top: 8rem;
+  transition: opacity 1.5s 0s ease-in-out; /* Transition for fade-in effect */
 }
 
 .feedback-container.show-feedback {
@@ -119,16 +109,40 @@
 }
 
 .feedback-content {
-  max-width: 80%;
+  max-width: 66vw;
   width: 100%;
   color: var(--color1);
   font-weight: 200;
   line-height: 1.2;
   letter-spacing: 0.01px;
   text-align: left;
-  /*padding: 1rem;*/
   box-sizing: border-box;
-  /*outline: 1px solid green;*/ /* For development visibility */
+  position: relative; /* Needed for the quotation mark styling */
+  padding: 1rem; /* Add padding for better readability */
+}
+
+.feedback-content p {
+  position: relative;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.feedback-content p::before,
+.feedback-content p::after {
+  content: '"';
+  font-size: 3rem;
+  position: absolute;
+  color: var(--color1);
+}
+
+.feedback-content p::before {
+  top: -1rem;
+  left: -2rem;
+}
+
+.feedback-content p::after {
+  bottom: -1rem;
+  right: -2rem;
 }
 
 .feedback-provider {
@@ -139,7 +153,20 @@
   text-align: left;
   font-weight: 200;
   font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.01px;
+  line-height: 1.1;
+  letter-spacing: 0.1px;
   margin-left: auto;
+  position: relative;
+}
+
+.feedback-provider::before {
+  content: '~ ';
+  position: absolute;
+  left: -1.5rem;
+}
+
+.feedback-lower-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

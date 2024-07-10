@@ -2,12 +2,24 @@ import './footer.css'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import jbResume from '../images/jamesboland-resume.pdf'
 
 export default function Footer() {
   return (
     <div>
       <footer className="footer">
         <div className="contact-info">
+          <a
+            href={jbResume}
+            className="download-link"
+            alt="Download resume"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faFileArrowDown} />
+          </a>
           <a
             href="https://www.linkedin.com/in/jamesrboland/"
             target="_blank"
