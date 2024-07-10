@@ -14,13 +14,9 @@ const feedbackList = [
   },
   {
     content:
-      "James was instrumental in helping us modernize our tech stack and streamline our processes. His expertise in web development and project management ensured our project's success.",
-    provider: 'Sarah Johnson\nCTO\nTech Innovators',
-  },
-  {
-    content:
-      'Working with James was a pleasure. His attention to detail and dedication to delivering high-quality work exceeded our expectations.',
-    provider: 'Michael Adams\nProject Manager\nCreative Solutions',
+      'James was a great asset in creatively solving some problems that we had with improving our FAQ set up for guests. After a short meeting he had presented a wireframe that met our needs in the most effective manner, and set upon the task with care to complete the project and liaising any questions that may have arisen as there was some individual properties that had different needs, and was generally easy to work with. His idea and work saved us an annual cost of $1500 + so was well worth the investment.',
+    provider:
+      'Patrick Killin\nDirector\nJindabyne Real Estate,\nAccommodation Jindabyne',
   },
 ]
 
@@ -31,11 +27,22 @@ export function Home(props) {
   const [scrollTimeout, setScrollTimeout] = useState(null)
   const [scrollDirection, setScrollDirection] = useState('down')
   const [scrollDelta, setScrollDelta] = useState(0)
+  const [touchStartY, setTouchStartY] = useState(0)
+  const [touchEndY, setTouchEndY] = useState(0)
+  const [showWelcomeTextScroll, setShowWelcomeTextScroll] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcomeTextScroll(true)
+    }, 1600)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   const fadeProps = useSpring({
     opacity: show ? 1 : 0,
     transform: show ? 'translateY(0px)' : 'translateY(-40px)',
-    config: { mass: 3, tension: 100, friction: 20 }, // Adjusting spring physics
+    config: { mass: 3, tension: 100, friction: 20 },
     delay: show ? 400 : 0,
     onRest: () => {
       if (!show && currentFeedbackIndex === -1) {
@@ -53,14 +60,14 @@ export function Home(props) {
     enter: (item) => ({
       opacity: 1,
       transform: 'translateY(0px)',
-      delay: item === 0 ? 300 : 600, // Reduce delay for the first feedback
+      delay: item === 0 ? 300 : 600,
     }),
     leave: {
       opacity: 0,
       transform:
         scrollDirection === 'down' ? 'translateY(-60px)' : 'translateY(60px)',
     },
-    config: { mass: 2.5, tension: 100, friction: 20 }, // Adjusting spring physics
+    config: { mass: 2.5, tension: 100, friction: 20 },
     onRest: () => {
       if (
         currentFeedbackIndex === feedbackList.length &&
@@ -91,10 +98,8 @@ export function Home(props) {
       setScrollTimeout(
         setTimeout(() => {
           if (Math.abs(scrollDelta) > 250) {
-            // Increase the threshold for triggering
             if (scrollDelta > 0) {
               setScrollDirection('down')
-              // User scrolled down
               if (show) {
                 setShow(false)
               } else if (currentFeedbackIndex < feedbackList.length) {
@@ -102,7 +107,6 @@ export function Home(props) {
               }
             } else {
               setScrollDirection('up')
-              // User scrolled up
               if (showFinalMessage) {
                 setShowFinalMessage(false)
                 setCurrentFeedbackIndex(feedbackList.length - 1)
@@ -113,17 +117,66 @@ export function Home(props) {
                 handlePreviousFeedback()
               }
             }
-            setScrollDelta(0) // Reset the scroll delta
+            setScrollDelta(0)
           }
         }, 300) // Increased debounce timeout
       )
     }
 
+    const handleTouchStart = (event) => {
+      setTouchStartY(event.touches[0].clientY)
+    }
+
+    const handleTouchMove = (event) => {
+      setTouchEndY(event.touches[0].clientY)
+    }
+
+    const handleTouchEnd = () => {
+      const touchDelta = touchStartY - touchEndY
+      if (Math.abs(touchDelta) > 100) {
+        // Increase the threshold for triggering
+        if (touchDelta > 0) {
+          setScrollDirection('down')
+          if (show) {
+            setShow(false)
+          } else if (currentFeedbackIndex < feedbackList.length) {
+            handleNextFeedback()
+          }
+        } else {
+          setScrollDirection('up')
+          if (showFinalMessage) {
+            setShowFinalMessage(false)
+            setCurrentFeedbackIndex(feedbackList.length - 1)
+          } else if (currentFeedbackIndex === 0) {
+            setShow(true)
+            setCurrentFeedbackIndex(-1)
+          } else if (currentFeedbackIndex > 0) {
+            handlePreviousFeedback()
+          }
+        }
+      }
+    }
+
     window.addEventListener('wheel', handleWheel)
+    window.addEventListener('touchstart', handleTouchStart)
+    window.addEventListener('touchmove', handleTouchMove)
+    window.addEventListener('touchend', handleTouchEnd)
+
     return () => {
       window.removeEventListener('wheel', handleWheel)
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleTouchMove)
+      window.removeEventListener('touchend', handleTouchEnd)
     }
-  }, [show, currentFeedbackIndex, showFinalMessage, scrollTimeout, scrollDelta])
+  }, [
+    show,
+    currentFeedbackIndex,
+    showFinalMessage,
+    scrollTimeout,
+    scrollDelta,
+    touchStartY,
+    touchEndY,
+  ])
 
   const handleNextFeedback = () => {
     setCurrentFeedbackIndex((prevIndex) =>
@@ -193,6 +246,7 @@ export function Home(props) {
             <br />
             <br />
           </p>
+
           <span
             className="welcome-text"
             data-aos="fade-in"
@@ -207,6 +261,29 @@ export function Home(props) {
               <span className="download-link"> Download my resume here.</span>
             </Link>
           </span>
+          <br />
+          {showWelcomeTextScroll && (
+            <p
+              className="welcome-text-scroll"
+              data-aos="fade-in"
+              data-aos-delay="3000"
+            >
+              scroll{' '}
+              <div className="lottie-icon">
+                <lottie-player
+                  src="https://lottie.host/91c7b5ed-0f86-4699-890b-92684385e1db/PePMFMofjt.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: 50, height: 50 }}
+                  loop
+                  autoplay
+                  direction="1"
+                  mode="normal"
+                ></lottie-player>
+              </div>{' '}
+              to see what people are saying
+            </p>
+          )}
         </main>
       </animated.div>
       {feedbackTransition((style, index) =>

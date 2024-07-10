@@ -26,7 +26,7 @@ export function About(props) {
           <div className="about-lhs">
             <div
               className="section-div left"
-              data-aos="fade-up"
+              data-aos="fade-in"
               data-aos-easing="ease-in-out"
             >
               <h1 className="h2-fa-icon">
@@ -118,7 +118,7 @@ export function About(props) {
               </p>
             </div>
             <div
-              data-aos="fade-up"
+              data-aos="fade-in"
               data-aos-easing="ease-in-out"
               data-aos-delay="100"
               className="section-div right"
@@ -139,7 +139,7 @@ export function About(props) {
               </p>
             </div>
             <div
-              data-aos="fade-up"
+              data-aos="fade-in"
               data-aos-easing="ease-in-out"
               data-aos-delay="100"
               className="section-div left"
@@ -170,7 +170,7 @@ export function About(props) {
               </p>
             </div>
             <div
-              data-aos="fade-up"
+              data-aos="fade-in"
               data-aos-easing="ease-in-out"
               data-aos-delay="100"
               className="section-div right"

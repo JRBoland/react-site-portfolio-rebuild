@@ -3,7 +3,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
 import jbResume from '../images/jamesboland-resume.pdf'
 
 export default function Footer() {

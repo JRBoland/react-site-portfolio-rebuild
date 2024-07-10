@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: min(100% - 4rem);
+  width: min(100% - 4rem, 80%);
   margin-inline: auto;
   position: absolute;
   top: 0;
@@ -182,7 +182,7 @@
 }
 
 .final-message {
-  padding-top: 20rem;
+  padding-top: 10rem;
   height: 80dvh;
   text-align: left;
   display: flex;
@@ -190,12 +190,12 @@
   align-items: center;
   opacity: 0;
   overflow: hidden;
-  pointer-events: none; /* Disable pointer events by default */
+  pointer-events: none;
 }
 
 .final-message.visible {
   opacity: 1;
-  pointer-events: auto; /* Enable pointer events when visible */
+  pointer-events: auto;
 }
 
 .final-message-content p {
@@ -219,4 +219,52 @@
 .final-message-content a:hover {
   opacity: 0.7;
   transform: translateY(2px);
+}
+
+@media only screen and (max-width: 900px) {
+  .home {
+    text-align: center;
+  }
+
+  .welcome-div {
+    line-height: 2em;
+    text-align: center;
+  }
+
+  .feedback-content {
+    padding: 0;
+    margin-bottom: 4em;
+  }
+
+  .feedback-content > p {
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .feedback-container {
+    margin-top: 4rem;
+  }
+
+  .welcome-text-scroll {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.lottie-icon {
+  display: inline-flex;
+  margin: -0.5em;
+}
+
+.welcome-text-scroll,
+.welcome-text-scroll > p {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Position the element absolutely */
+  bottom: 180px; /* Adjust the bottom position as needed */
+  width: 100%; /* Ensure it takes the full width of the parent */
+  color: var(--color2);
+  animation: floating 3s ease-in-out infinite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
