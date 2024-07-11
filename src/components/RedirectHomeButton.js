@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './redirecthomebutton.css'
 
 export function RedirectHomeButton() {
+  const navigate = useNavigate()
+
   const changeRedirectStatus = () => {
-    window.location.href = '/'
+    navigate('/')
   }
 
   return (
