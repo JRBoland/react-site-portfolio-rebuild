@@ -42,7 +42,7 @@ export function Home(props) {
   const fadeProps = useSpring({
     opacity: show ? 1 : 0,
     transform: show ? 'translateY(0px)' : 'translateY(-40px)',
-    config: { mass: 3, tension: 100, friction: 20 },
+    config: { mass: 3, tension: 100, friction: 22 },
     delay: show ? 400 : 0,
     onRest: () => {
       if (!show && currentFeedbackIndex === -1) {
@@ -97,7 +97,7 @@ export function Home(props) {
 
       setScrollTimeout(
         setTimeout(() => {
-          if (Math.abs(scrollDelta) > 250) {
+          if (Math.abs(scrollDelta) > 200) {
             if (scrollDelta > 0) {
               setScrollDirection('down')
               if (show) {
@@ -133,7 +133,7 @@ export function Home(props) {
 
     const handleTouchEnd = () => {
       const touchDelta = touchStartY - touchEndY
-      if (Math.abs(touchDelta) > 100) {
+      if (Math.abs(touchDelta) > 75) {
         // Increase the threshold for triggering
         if (touchDelta > 0) {
           setScrollDirection('down')
