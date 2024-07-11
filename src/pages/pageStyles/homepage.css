@@ -255,7 +255,7 @@
   }
 
   .feedback-container {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
 
   .welcome-text-scroll,
@@ -270,6 +270,15 @@
   .lottie-icon {
     display: inline-flex;
     margin: -2em;
+  }
+
+  .back-button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    margin-top: 2rem;
   }
 }
 
@@ -314,5 +323,5 @@
 }
 
 .back-button span:active {
-  transform: translateY(-0px)
+  transform: translateY(-0px);
 }

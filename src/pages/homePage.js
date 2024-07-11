@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import jbResume from '../images/jamesboland-resume.pdf'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 
-
 const feedbackList = [
   {
     content:
@@ -32,6 +31,7 @@ export function Home(props) {
   const [touchEndY, setTouchEndY] = useState(0)
   const [showWelcomeTextScroll, setShowWelcomeTextScroll] = useState(false)
   const [showBackButton, setShowBackButton] = useState(false) // Add state for the back button
+  const [buttonClicked, setButtonClicked] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -147,7 +147,7 @@ export function Home(props) {
         // Increase the threshold for triggering
         if (
           String(target.className).includes('back-button') ||
-          target.tagName === 'SPAN'
+          target.tagName === 'SPAN' || target.tagName === 'H2'
         ) {
           return
         }

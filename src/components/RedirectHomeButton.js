@@ -2,13 +2,12 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './redirecthomebutton.css'
 
-export function RedirectHomeButton({ resetHomePageState }) {
+export function RedirectHomeButton() {
   const navigate = useNavigate()
 
   const changeRedirectStatus = (event) => {
     event.preventDefault()
-    navigate('/', { replace: true })
-    window.location.reload()
+    navigate('/')
   }
 
   return (
