@@ -30,6 +30,7 @@ export function Home(props) {
   const [touchStartY, setTouchStartY] = useState(0)
   const [touchEndY, setTouchEndY] = useState(0)
   const [showWelcomeTextScroll, setShowWelcomeTextScroll] = useState(false)
+  const [showBackButton, setShowBackButton] = useState(false) // Add state for the back button
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -83,6 +84,11 @@ export function Home(props) {
     transform: showFinalMessage ? 'translateY(0px)' : 'translateY(40px)',
     config: { mass: 2.5, tension: 100, friction: 20 },
     delay: show ? 400 : 0,
+    onRest: () => {
+      if (showFinalMessage) {
+        setShowBackButton(true) // Show back button when final message is shown
+      }
+    },
   })
 
   useEffect(() => {
@@ -113,6 +119,8 @@ export function Home(props) {
               } else if (currentFeedbackIndex === 0) {
                 setShow(true)
                 setCurrentFeedbackIndex(-1)
+                setShowBackButton(false) // Hide back button when going back to welcome text
+                setShowFinalMessage(false)
               } else if (currentFeedbackIndex > 0) {
                 handlePreviousFeedback()
               }
@@ -131,10 +139,14 @@ export function Home(props) {
       setTouchEndY(event.touches[0].clientY)
     }
 
-    const handleTouchEnd = () => {
+    const handleTouchEnd = (event) => {
       const touchDelta = touchStartY - touchEndY
+      const target = event.target
       if (Math.abs(touchDelta) > 75) {
         // Increase the threshold for triggering
+        if (target.className.includes('back-button') || target.tagName === 'SPAN') {
+          return
+        }
         if (touchDelta > 0) {
           setScrollDirection('down')
           if (show) {
@@ -150,6 +162,8 @@ export function Home(props) {
           } else if (currentFeedbackIndex === 0) {
             setShow(true)
             setCurrentFeedbackIndex(-1)
+            setShowBackButton(false) // Hide back button when going back to welcome text
+            setShowFinalMessage(false)
           } else if (currentFeedbackIndex > 0) {
             handlePreviousFeedback()
           }
@@ -185,7 +199,19 @@ export function Home(props) {
   }
 
   const handlePreviousFeedback = () => {
-    setCurrentFeedbackIndex((prevIndex) => Math.max(prevIndex - 1, 0))
+    setCurrentFeedbackIndex((prevIndex) => {
+      const newIndex = Math.max(prevIndex - 1, -1)
+      if (newIndex === -1) {
+        setShowBackButton(false) // Hide back button when going back to welcome text
+      }
+      if (newIndex < feedbackList.length) {
+        setShowFinalMessage(false) // Hide final message when going to previous feedback
+      }
+      if (newIndex === -1) {
+        setShow(true) // Show the welcome text
+      }
+      return newIndex
+    })
   }
 
   return (
@@ -269,7 +295,7 @@ export function Home(props) {
               data-aos-delay="3000"
             >
               scroll{' '}
-              <div className="lottie-icon">
+              <span className="lottie-icon">
                 <lottie-player
                   src="https://lottie.host/91c7b5ed-0f86-4699-890b-92684385e1db/PePMFMofjt.json"
                   background="transparent"
@@ -280,7 +306,7 @@ export function Home(props) {
                   direction="1"
                   mode="normal"
                 ></lottie-player>
-              </div>{' '}
+              </span>{' '}
               to see what people are saying
             </p>
           )}
@@ -314,7 +340,7 @@ export function Home(props) {
         style={finalMessageProps}
       >
         <div className="final-message-content">
-          <p className="welcome-text">
+          <span className="welcome-text">
             you can find out a bit more
             <ul>
               <li className="clear-span">
@@ -328,9 +354,16 @@ export function Home(props) {
                 <Link to="/contact">get in touch.</Link>
               </li>
             </ul>
-          </p>
+          </span>
         </div>
       </animated.div>
+      <div className="back-button-container">
+        {showBackButton && (
+          <div className="back-button" data-aos="fade-in" data-aos-delay="600">
+            <span onClick={handlePreviousFeedback}>^</span>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

@@ -198,7 +198,7 @@
   pointer-events: auto;
 }
 
-.final-message-content p {
+.final-message-content span {
   color: var(--color1);
 }
 
@@ -258,7 +258,8 @@
     margin-top: 8rem;
   }
 
-  .welcome-text-scroll, .welcome-text-scroll > p {
+  .welcome-text-scroll,
+  .welcome-text-scroll > p {
     display: flex;
     justify-content: center;
     bottom: 180px;
@@ -270,7 +271,6 @@
     display: inline-flex;
     margin: -2em;
   }
-  
 }
 
 .lottie-icon {
@@ -278,4 +278,41 @@
   margin: -0.5em;
 }
 
+.back-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+.back-button {
+  position: absolute;
+  margin-right: auto;
+  width: 66dvw;
+  margin-right: auto;
+  font-size: 4rem;
+  color: var(--color1);
+  animation: floating 3s ease-in-out infinite;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  height: 3rem;
+}
+
+.back-button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+}
+
+.back-button span:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: translateY(1px);
+}
+
+.back-button span:active {
+  transform: translateY(-0px)
+}
