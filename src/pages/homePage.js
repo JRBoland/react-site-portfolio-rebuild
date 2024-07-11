@@ -274,7 +274,7 @@ export function Home(props) {
                   src="https://lottie.host/91c7b5ed-0f86-4699-890b-92684385e1db/PePMFMofjt.json"
                   background="transparent"
                   speed="1"
-                  style={{ width: 50, height: 50 }}
+                  style={{ width: 40, height: 40 }}
                   loop
                   autoplay
                   direction="1"

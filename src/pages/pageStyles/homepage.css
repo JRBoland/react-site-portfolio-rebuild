@@ -221,6 +221,19 @@
   transform: translateY(2px);
 }
 
+.welcome-text-scroll,
+.welcome-text-scroll > p {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Position the element absolutely */
+  bottom: 80px; /* Adjust the bottom position as needed */
+  width: 100%; /* Ensure it takes the full width of the parent */
+  color: var(--color2);
+  animation: floating 3s ease-in-out infinite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @media only screen and (max-width: 900px) {
   .home {
     text-align: center;
@@ -245,10 +258,19 @@
     margin-top: 4rem;
   }
 
-  .welcome-text-scroll {
+  .welcome-text-scroll, .welcome-text-scroll > p {
     display: flex;
     justify-content: center;
+    bottom: 180px;
+    font-size: 14px;
+    letter-spacing: 0.01px;
   }
+
+  .lottie-icon {
+    display: inline-flex;
+    margin: -2em;
+  }
+  
 }
 
 .lottie-icon {
@@ -256,15 +278,4 @@
   margin: -0.5em;
 }
 
-.welcome-text-scroll,
-.welcome-text-scroll > p {
-  display: flex;
-  align-items: center;
-  position: absolute; /* Position the element absolutely */
-  bottom: 80px; /* Adjust the bottom position as needed */
-  width: 100%; /* Ensure it takes the full width of the parent */
-  color: var(--color2);
-  animation: floating 3s ease-in-out infinite;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
