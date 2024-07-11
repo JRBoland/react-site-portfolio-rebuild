@@ -10,6 +10,7 @@ import { Projects } from './pages/projectsPage'
 import { ProjectsPost } from './pages/projectsPostPage'
 import ThemeContextWrapper from './ThemeProvider'
 
+
 function App() {
   return (
     <BrowserRouter>

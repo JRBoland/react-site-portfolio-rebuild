@@ -1,6 +1,6 @@
 import { RedirectHomeButton } from './RedirectHomeButton'
 import { Link, useLocation } from 'react-router-dom'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
@@ -17,6 +17,10 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
+  const resetHomePageState = useCallback(() => {
+    // Reset state logic
+  }, [])
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 800)
@@ -43,7 +47,7 @@ export default function Header() {
       <header className="header">
         <nav className="navigation">
           <div className="homedirectory">
-            <RedirectHomeButton />
+          <RedirectHomeButton resetHomePageState={resetHomePageState} />
             <span className="where">{currentPage}</span>
           </div>
           {isMobile ? (

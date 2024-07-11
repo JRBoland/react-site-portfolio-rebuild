@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import jbResume from '../images/jamesboland-resume.pdf'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 
+
 const feedbackList = [
   {
     content:
@@ -144,7 +145,10 @@ export function Home(props) {
       const target = event.target
       if (Math.abs(touchDelta) > 75) {
         // Increase the threshold for triggering
-        if (target.className.includes('back-button') || target.tagName === 'SPAN') {
+        if (
+          String(target.className).includes('back-button') ||
+          target.tagName === 'SPAN'
+        ) {
           return
         }
         if (touchDelta > 0) {
