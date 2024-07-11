@@ -30,8 +30,7 @@ export function Home(props) {
   const [touchStartY, setTouchStartY] = useState(0)
   const [touchEndY, setTouchEndY] = useState(0)
   const [showWelcomeTextScroll, setShowWelcomeTextScroll] = useState(false)
-  const [showBackButton, setShowBackButton] = useState(false) // Add state for the back button
-  const [buttonClicked, setButtonClicked] = useState(false)
+  const [showBackButton, setShowBackButton] = useState(false) 
 
   useEffect(() => {
     const timer = setTimeout(() => {
