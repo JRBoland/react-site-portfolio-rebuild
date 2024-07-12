@@ -9,7 +9,7 @@ import { Contact } from './pages/contactPage'
 import { Projects } from './pages/projectsPage'
 import { ProjectsPost } from './pages/projectsPostPage'
 import ThemeContextWrapper from './ThemeProvider'
-
+import NotFound from './pages/NotFoundPage'
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectsPost />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </ThemeContextWrapper>
