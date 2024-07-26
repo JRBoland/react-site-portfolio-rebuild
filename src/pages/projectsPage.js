@@ -9,7 +9,7 @@ import blogImage5 from '../images/blog-image-5.jpg'
 import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
 import blogImage8 from '../images/blog-image-8.gif'
-import blogImage9 from '../images/blog-image-9.gif'
+import blogImage9 from '../images/blog-image-9-0.gif'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -88,19 +88,19 @@ export function Projects(props) {
       id: 8,
       title: 'Fliight Technologies: Website Rebuild',
       //post-image: ,
-      date: 'Working on this right now',
+      date: '',
       image: `${blogImage8}`,
       description:
-        'Website rebuild for UAV technology company, Fliight Technologies. A current work in progress near completion. Built using React and TailwindCSS',
+        'Website rebuild for UAV technology company, Fliight Technologies.',
     },
     {
       id: 9,
       title: 'Drone Flight Logger: Full Stack Mobile App',
       //post-image: ,
-      date: 'April 2024',
+      date: '',
       image: `${blogImage9}`,
       description:
-        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend.',
+        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API and postgres database on the backend. Deployed with Ubuntu running on an AWS EC2 instance.',
     },
   ]
 

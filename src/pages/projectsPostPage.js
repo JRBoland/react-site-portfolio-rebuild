@@ -10,6 +10,7 @@ import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
 import blogImage8 from '../images/blog-image-8.gif'
 import blogImage9 from '../images/blog-image-9.gif'
+import blogImage9v0 from '../images/blog-image-9-1.gif'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -114,32 +115,109 @@ export function ProjectsPost(props) {
       id: 8,
       title: 'Fliight Technologies Website rebuild',
       //post-image: ,
-      date: 'October 2024',
+      date: '(ongoing)',
       image: `${blogImage8}`,
       description:
         'Website rebuild for UAV technology company, Fliight Technologies.',
-      contents:
-        (<span>Worked closely with a designer to give the website a complete, responsive rebuild suitable for desktop, mobile and tablet devices. Worked closely with the clients and communicated expectations in accordance with budget and deadlines. Worked and regularly communicated with client to deliver a site adhering to client's budget constraints. Built using React and TailwindCSS, to be deployed with Netlify. EmailJS and Google reCAPTCHA. Final live version to be deployed May 2024. Check out the demo <a href="https://fliight-technologies-demo-site.netlify.app" target="_blank" rel="noopener noreferrer" className="download-link-link">here.</a> </span>),
+      contents: (
+        <span>
+          Worked closely with a designer to give the website a complete,
+          responsive rebuild suitable for desktop, mobile and tablet devices.
+          Worked closely with the clients and communicated expectations in
+          accordance with budget and deadlines. Worked and regularly
+          communicated with client to deliver a site adhering to client's budget
+          constraints. Built using React and TailwindCSS, be deployed with
+          Netlify. EmailJS and Google reCAPTCHA. Setup various redirects (such
+          as{' '}
+          <a
+            href="https://deltaquad.com.au"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-link-link"
+          >
+            deltaquad.com.au
+          </a>
+          ,{' '}
+          <a
+            href="https://arace.au"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-link-link"
+          >
+            arace.au
+          </a>
+          ,{' '}
+          <a
+            href="https://fliight.store"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-link-link"
+          >
+            fliight.store
+          </a>
+          ) and hosted external glitch projects.{' '}
+        </span>
+      ),
       link: 'https://github.com/JRBoland/fliight-technologies',
-      live: '',
+      live: 'https://fliight.com.au',
     },
     {
       id: 9,
       title: 'Drone Flight Logger: Full Stack Mobile App',
       //post-image: ,
-      date: 'April 2024',
+      date: 'April / July 2024',
       image: `${blogImage9}`,
       description:
-        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend.',
-      contents:
-        (<span>Full Stack mobile app to record drone flight logs. UI built in React Native Expo with a NestJs API backend, connected to a PostgreSQL database. Varying role permissions based on user authentication and authorsation (guest, user, admin). Full CRUD functionality with Pilot, Flight and Drone entities on the frontend and additional User entity on the server side.
-        Frontend made for both android and iOS mobile devices. Backend has unit tests written with Jest and containerised using Docker Compose. <br/><br/>You can view the repo for the backend <a href="https://github.com/JRBoland/nestjs-drone-api" target="_blank" rel="noopener noreferrer" className="download-link-link">here</a>, or the repo for the UI below.</span>),
+        'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API on the backend. Deployed with Ubuntu running on an AWS EC2 instance.',
+      contents: (
+        <span>
+          Full Stack mobile app to record drone flight logs. UI built in React
+          Native Expo with a NestJs API backend, connected to a PostgreSQL
+          database. Varying role permissions based on user authentication and
+          authorsation (guest, user, admin). Full CRUD functionality with Pilot
+          (including live 'flights recorded' value), Flight and Drone entities
+          on the frontend and additional User entity on the server side.  Live search functionality.
+          Frontend made for both android and iOS mobile devices. Backend has
+          unit tests written with Jest and containerised using Docker Compose.
+          Password hashing with bcrypt. Server
+          deployed with Ubuntu on an AWS EC2 instance. <br />
+          <br />
+          This version of the application is a rehash of an earlier version,
+          done in April of this year. The earlier version looked like this:{' '}
+          <br />
+          <br />
+          <img src={blogImage9v0} alt="Earlier version of the app" />
+          <br />
+          <br />
+          You can view the repo for the backend{' '}
+          <a
+            href="https://github.com/JRBoland/nestjs-drone-api"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-link-link"
+          >
+            here
+          </a>
+          , or the repo for the UI below.
+          <br />
+          <br />A note if you check out the live version: Using as a 'guest'
+          only allows to view entities. Account creation offers two options;
+          'user' and 'admin' roles. 'user' roles are able to only view entities
+          and create a new flight (using existing drone or pilot ID's). 'admin'
+          roles are able to perform full CRUD operations of creating, reading,
+          updating, or deleting entities.
+          <br />
+          <br />
+          You can test out the admin features without creating an admin account
+          using the username 'testadmin' and password 'password123' (secure, I
+          know 😉)
+        </span>
+      ),
       link: 'https://github.com/JRBoland/drone-api-ui/',
-      live: '',
+      live: 'http://ec2-13-54-83-237.ap-southeast-2.compute.amazonaws.com/',
     },
   ]
 
-  
   const { id } = useParams() // Retrieve the project ID from the URL parameter
 
   useEffect(() => {
