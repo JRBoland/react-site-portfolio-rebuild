@@ -174,13 +174,12 @@ export function ProjectsPost(props) {
           Full Stack mobile app to record drone flight logs. UI built in React
           Native Expo with a NestJs API backend, connected to a PostgreSQL
           database. Varying role permissions based on user authentication and
-          authorsation (guest, user, admin). Full CRUD functionality with Pilot
+          authorsation (guest, user, admin) using JWT. Full CRUD functionality with Pilot
           (including live 'flights recorded' value), Flight and Drone entities
           on the frontend and additional User entity on the server side.  Live search functionality.
           Frontend made for both android and iOS mobile devices. Backend has
           unit tests written with Jest and containerised using Docker Compose.
-          Password hashing with bcrypt. Server
-          deployed with Ubuntu on an AWS EC2 instance. <br />
+          Password hashing with bcrypt. Backend deployed on an AWS EC2 instance running Ubuntu, with SSL certificate setup using certbot and nginx, and nip.io for DNS management. Frontened deployed using Netlify. <br />
           <br />
           This version of the application is a rehash of an earlier version,
           done in April of this year. The earlier version looked like this:{' '}
@@ -214,7 +213,7 @@ export function ProjectsPost(props) {
         </span>
       ),
       link: 'https://github.com/JRBoland/drone-api-ui/',
-      live: 'http://ec2-13-54-83-237.ap-southeast-2.compute.amazonaws.com/',
+      live: 'https://droneflightlogger.netlify.app/',
     },
   ]
 
