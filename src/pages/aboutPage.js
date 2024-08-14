@@ -56,7 +56,7 @@ export function About(props) {
                   projects
                 </Link>{' '}
                 and undergone mentorship in building projects using varying
-                different technologies. I'm excited about the direction and future of technology and code, with a keen interest and curiousity on AI, LLMs and the waves of emerging AI tools.
+                different technologies. I'm excited about the direction and potential of technology and code, with a keen interest and curiousity on AI, LLMs and the waves of emerging AI tools. I'm currently balancing freelance work, casual non-dev related work, and studying for a AWS Solutions Architect Associate certification exam, to be taken November this year.
                 <br />
                 <br />
                 <em>A little bit on how I got here:</em>
@@ -136,6 +136,8 @@ export function About(props) {
                 with Coder Academy, (Diploma of Information Technology), where I
                 completed my studies with a High Distinction average (Weighted
                 Average Mark of 90.12%) throughout all terms.
+                <br/>
+                I'm currently studying to complete my AWS SAA Certification later this year.
               </p>
             </div>
             <div
