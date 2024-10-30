@@ -110,7 +110,7 @@ export function Projects(props) {
       date: 'October 2024',
       image: `${blogImage10}`,
       description:
-        'Web based text/markdown to PDF converter, built with TypeScript and React. ',
+        'Simiple web based text/markdown to PDF converter, built with TypeScript and React. ',
     },
   ]
 
