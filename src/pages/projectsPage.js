@@ -10,6 +10,7 @@ import blogImage6 from '../images/blog-image-6.jpg'
 import blogImage7 from '../images/blog-image-7.jpg'
 import blogImage8 from '../images/blog-image-8.gif'
 import blogImage9 from '../images/blog-image-9-0.gif'
+import blogImage10 from '../images/blog-image-10.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -101,6 +102,15 @@ export function Projects(props) {
       image: `${blogImage9}`,
       description:
         'Full stack drone flight log mobile app, built using TypeScript with React Native & Expo on the frontend with a Nestjs API and postgres database on the backend. Deployed with Ubuntu running on an AWS EC2 instance.',
+    },
+    {
+      id: 10,
+      title: 'Text to PDF converter',
+      //post-image: ,
+      date: 'October 2024',
+      image: `${blogImage10}`,
+      description:
+        'Web based text/markdown to PDF converter, built with TypeScript and React. ',
     },
   ]
 
