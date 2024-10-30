@@ -226,8 +226,8 @@ export function ProjectsPost(props) {
         'Web based text/markdown to PDF converter, built with TypeScript and React.',
       contents:
         'Text to PDF converter built with TypeScript and React. Uses the html2pdf and marked library to convert text and markdown to PDF. ',
-      link: 'https://github.com/JRBoland/text-to-pdf-converter',
-      live: 'https://text-to-pdf-converter.netlify.app/',
+      link: 'https://github.com/JRBoland/text-to-pdf',
+      live: 'https://text-to-pdf.netlify.app/',
     },
   ]
 
